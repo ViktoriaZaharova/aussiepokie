@@ -1,0 +1,813 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  color: #263238
+  background: #fff
+  
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0 10px
+  box-sizing: border-box
+  font-family: $default-font
+  font-size: 16px
+  border: none
+    radius: 0
+
+  &:hover, &:focus
+    outline: none
+
+.btn-burger
+  width: 20px
+  height: 16px
+  display: none
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  margin: 0 0 0 auto
+
+  span
+    width: 100%
+    height: 2px
+    background: $accent
+
+.container
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  width: 100%
+  max-width: 1370px
+  padding: 0 15px
+  margin: 0 auto
+
+.owl-dots
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.owl-carousel button.owl-dot
+  cursor: pointer
+  width: 10px
+  height: 10px
+  opacity: 1
+  border: 1px solid #263238
+    radius: 50%
+  margin: 0 0 0 10px
+  outline: none
+  box-shadow: none
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+  &:first-child
+    margin: 0
+
+.owl-carousel button.owl-dot.active
+  background: #263238
+
+.logo
+  display: flex
+  align-items: center
+  justify-content: center
+  max-width: 196px
+  width: 100%
+
+h1
+  font-weight: 900
+  font-size: 80px
+  letter-spacing: 0.04em
+  line-height: 98.69%
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  padding: 0 0 25px
+  margin: 0 0 8px
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    height: 1px
+    background: #fff
+    max-width: 647px
+    width: 100%
+
+  span
+    font-size: 50px
+    font-weight: normal
+    letter-spacing: -0.03em
+    display: block
+
+h2
+  width: 100%
+  text-align: center
+  margin: 0 auto 55px
+  font-size: 60px
+  font-weight: bold
+  text-transform: uppercase
+
+  span
+    display: block
+
+.box-text
+  line-height: 16px
+  font-size: 14px
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  text-transform: uppercase
+  border: none
+    radius: 20px
+  cursor: pointer
+  transition: .3s ease
+  outline: none
+  height: 40px
+  font-size: 10px
+  font-weight: bold
+  font-family: $font
+  padding: 0 10px
+  max-width: 190px
+  width: 100%
+
+  &:hover, &:focus
+    outline: none
+
+
+.btn-accent
+  color: #fff
+  background: $accent
+
+  &:hover
+    background: $header
+    color: #fff
+
+.btn-black-blue
+  background: $header
+  color: #fff
+
+  &:hover
+    background: $accent
+    color: #fff
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+
+.button-group
+  display: flex
+  flex-direction: column
+  max-width: 182px
+  width: 100%
+
+  .btn
+    margin: 0 0 8px
+
+    padding: 0
+    width: 100%
+
+    &:last-child
+      margin: 0
+
+.color-green
+  color: #146726
+
+.w-100
+  width: 100%
+
+.row
+  margin: 0 -15px
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+
+.col-2
+  width: 20%
+  padding: 0 15px
+
+//header
+header
+  background: $header
+  color: #fff
+  padding: 17px 0
+
+  .container
+    align-items: center
+
+.menu
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  text-transform: uppercase
+  font-weight: bold
+  margin: 0 0 0 auto
+
+  li
+    margin: 0 25px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      color: #fff
+
+      &:hover
+        color: $accent
+
+.dropdown
+  position: relative
+
+.show
+  .dropdown-toggle
+    &:after
+      transform: rotate(180deg)
+
+  .menu-links
+    color: $accent
+
+  .dropdown-menu
+    display: block
+
+.dropdown-toggle
+  &:after
+    content: ''
+    display: inline-block
+    margin: 0 0 0 10px
+    width: 10px
+    height: 10px
+    background: url("../img/arrow-bottom.svg") no-repeat center
+      size: contain
+
+.dropdown-menu
+  display: none
+  position: absolute
+  left: 50%
+  top: calc(100% + 40px)
+  transform: translate(-50%, 0)
+  z-index: 2
+  padding: 11px 33px
+  background: $header
+
+  a
+    margin: 0 0 18px
+
+    &:last-child
+      margin: 0
+
+
+//main
+.home
+  padding: 67px 0 88px
+  color: #fff
+  background: url("../img/bg1.png") no-repeat center
+    size: cover
+
+  .box-text
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+    max-width: 700px
+    width: 100%
+
+//catalog-casino
+.catalog-casino
+  padding: 30px 0 66px
+
+  h2
+
+    margin: 0 auto 25px
+    color: #263238
+    font-size: 64px
+
+    span
+      font-size: 30px
+      letter-spacing: 0.195em
+
+.btn-load
+  margin: 44px auto 0
+
+.card-casino
+  margin: 0 0 4px
+  border: 1px solid #8C8C8C
+  background: #fff
+  padding: 37px 0 59px
+
+  .container
+    align-items: center
+  &:last-child
+    margin: 0
+
+.card-casino-info
+  font-size: 20px
+  line-height: 23px
+
+  strong
+    font-weight: bold
+
+.card-casino-number
+  width: 54px
+  font-size: 30px
+  font-weight: bold
+  color: #263238
+
+.card-casino-logo
+  width: 180px
+  color: #031696
+  font-size: 12px
+  font-weight: bold
+  margin: 0 49px 0 0
+
+  span
+    display: block
+    text-align: center
+    text-decoration: underline
+    max-width: 155px
+    width: 100%
+    margin: 0 auto
+
+.list-rating
+  display: flex
+  align-items: center
+  margin: 7px 0 0
+  li
+    width: 27px
+    height: 27px
+    .svg-icon
+      fill: none
+
+.card-casino-rating
+  font-size: 20px
+  width: 140px
+
+.card-casino-info
+  width: 320px
+  margin: 0 0 0 auto
+
+.card-casino-offer
+  font-size: 20px
+  font-weight: bold
+  color: #FA8F2D
+  text-align: center
+  max-width: 256px
+  width: 100%
+  margin: 0 auto 0 0
+
+.card-casino-top1
+  background: rgba(250, 141, 3, 0.2)
+  border: 4px solid #FA8D03
+
+.card-casino-top2
+  background: rgba(250, 141, 3, 0.1)
+  border: 2px solid #FA8D03
+
+.card-casino-top3
+  background: rgba(250, 141, 3, 0.05)
+  border: 1px solid #FA8D03
+
+//bonuses-text
+.bonuses-text
+  background: linear-gradient(to top, rgba(250, 141, 3, 0.5) 0%, rgba(196, 196, 196, 0) 39.06%)
+  padding: 0 0 50px
+  .container
+    max-width: 1150px
+  h2
+    font-size: 30px
+    margin: 0 0 30px
+    text-transform: none
+    text-align: left
+  .box-text
+    margin: 0 0 30px
+    font-size: 18px
+    line-height: 21px
+    &:last-child
+      margin: 0
+
+.poker-play-australies
+  padding: 50px 0 57px
+  background: linear-gradient(to bottom, rgba(250, 141, 3, 0.5) 0%, rgba(196, 196, 196, 0) 39.06%)
+  h2
+    text-transform: uppercase
+    font-size: 40px
+    margin: 0 auto 65px
+    text-align: center
+  h3
+    font-size: 24px
+    font-weight: bold
+    margin: 0 0 30px
+    line-height: 28px
+  .box-text
+    font-weight: bold
+
+.play-now-carousel
+  width: 100%
+  position: relative
+  .owl-dots
+    position: absolute
+    left: 0
+    bottom: -28px
+
+.play-now-carousel-item
+  position: relative
+  width: 100%
+  height: 500px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.play-now-carousel__content
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translate(-50%,0)
+  z-index: 1
+  padding: 34px 0 0
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  font-size: 24px
+  color: #fff
+  text-align: center
+
+.links-play-now
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  color: #FA8D03
+  font-size: 50px
+  font-weight: 900
+  text-transform: uppercase
+  padding: 10px 29px
+  background: rgba(250, 141, 3, 0.2)
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border: 2px solid #FA8D03
+    radius: 20px
+  margin: 0 auto 11px
+
+//faq
+.faq
+  h2
+    margin: 0 0 29px
+    text-align: left
+    font-size: 38px
+  .container
+    max-width: 1175px
+
+.panel_heading
+  width: 100%
+  margin: 0 0 7px
+  border: 1px solid rgba(0, 19, 149, 0.1)
+    radius: 10px
+  background: #fff
+  box-shadow: 0px 2px 5px rgba(0, 19, 149, 0.1)
+  overflow: hidden
+  &:last-child
+    margin: 0
+
+.block_title
+  transition: .3s ease
+  cursor: pointer
+  width: 100%
+  font-size: 18px
+  padding: 12px 20px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  .arrow-icon
+    width: 9px
+    height: 10px
+    fill: #001395
+
+.block_hover
+  display: none
+  width: 100%
+  padding: 12px 20px
+  font-size: 14px
+
+.in
+  .block_title
+    background: $accent
+    color: #fff
+    .arrow-icon
+      fill: #fff
+
+//slot
+.slot
+  padding: 118px 0 57px
+  position: relative
+  z-index: 1
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 231px
+    z-index: -1
+    background: linear-gradient(to bottom, rgba(250, 141, 3, 0.5) 0%, rgba(196, 196, 196, 0) 39.06%)
+  .container
+    max-width: 1175px
+  h2
+    text-transform: none
+    font-size: 30px
+    margin: 0 0 34px
+    color: #000000
+    text-align: left
+  .wrapper
+    padding: 0 0 39px
+    border-bottom: 1px solid #263238
+    position: relative
+    z-index: 1
+  .box-text
+    font-size: 18px
+    line-height: 21px
+    max-width: 713px
+    width: 100%
+    .btn-load
+      margin: 95px 0 0
+    ul
+      li
+        margin: 0 0 13px
+
+.slot-img
+  position: absolute
+  right: -130px
+  max-width: 641px
+  width: 100%
+  top: -60px
+  z-index: -1
+
+.wrapper
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+
+.list-dots
+  list-style: disc
+  padding: 0 0 0 30px
+
+.top-free-pokies-title
+  background: $accent
+  color: #fff
+  padding: 48px 0
+  h2
+    font-size: 40px
+    margin: 0 auto
+
+.top-free-pokies-slider
+  .owl-dots
+    position: absolute
+    left: 0
+    top: -35px
+    button.owl-dot
+      border: 1px solid #fff
+    button.owl-dot.active
+      background: #fff
+
+
+.top-free-pokies-card
+  box-shadow: 0px 5px 10px rgba(0, 20, 149, 0.15)
+  background: #fff
+  border-radius: 10px
+  overflow: hidden
+  max-width: 217px
+  width: 100%
+  margin: 0 auto
+  h3
+    text-align: center
+    color: #001395
+    font-size: 25px
+    font-weight: bold
+  .list-rating
+    margin: 12px auto
+    justify-content: center
+    li
+      width: 19px
+      height: 19px
+  .btn
+    font-size: 16px
+    font-family: 'Noto Sans', sans-serif
+    letter-spacing: 0.05em
+    font-weight: 700
+
+.top-free-pokies-card__img
+  width: 100%
+  height: 154px
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.top-free-pokies-card__body
+  padding: 10px 17px 14px
+
+
+.top-free-pokies-content
+  background: $header
+  padding: 73px 0 56px
+
+//news
+.news
+  padding: 79px 0 44px
+  h2
+    color: #000000
+  .btn-load
+    margin: 0 auto
+
+
+.news-card
+  box-shadow: 0 5px 10px rgba(0, 20, 149, 0.15)
+  border-radius: 10px
+  background: #fff
+  border: 1px solid rgba(0, 19, 149, 0.06)
+  max-width: 217px
+  width: 100%
+  margin: 0 auto 50px
+  position: relative
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+
+    transition: .3s ease
+
+  .btn
+    display: none
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    max-width: 182px
+    font-size: 16px
+    font-weight: 900
+    letter-spacing: 0.05em
+    font-family: 'Noto Sans', sans-serif
+  &:hover
+
+    &:before
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.5)
+      box-shadow: 0px 5px 10px rgba(0, 20, 149, 0.15)
+      border: 3px solid #FA8D03
+        radius: 10px
+    .btn
+      display: flex
+
+.news-card-img
+  width: 100%
+  height: 154px
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 1px solid #C4C4C4
+  border-radius: 10px 10px 0 0
+
+.news-card-body
+  padding: 10px 10px 35px
+  h4
+    color: #001395
+    font-size: 25px
+    font-weight: bold
+    text-align: center
+  .box-text
+    margin: 9px 0 40px
+    font-size: 15px
+    font-weight: bold
+
+.news-card-address
+  text-align: center
+  font-size: 12px
+  span
+    display: block
+    color: #8C8C8C
+
+//footer
+footer
+  background: $header
+  color: #fff
+  padding: 17px 0
+
+  .container
+    max-width: 1240px
+    align-items: center
+
+.home-menu
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 30px 0 auto
+  font-size: 14px
+  font-weight: 500
+  text-transform: uppercase
+
+  li
+    margin: 0 45px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      color: #fff
+
+      &:hover
+        color: $accent
+
+
+@import "media"
+// Всегда в конце
