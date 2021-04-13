@@ -51,9 +51,10 @@
     span
       font-size: 24px
 
-  .slot .box-text
-    font-size: 16px
-    max-width: 620px
+  .slot
+    .box-text
+      font-size: 16px
+      max-width: 620px
 
   .main-content
     max-width: 700px
@@ -68,6 +69,21 @@
     padding: 20px
     font-size: 16px
 
+  .slot-two
+    .box-text
+      max-width: 600px
+      h3
+        font-size: 20px
+        line-height: normal
+    .slot-img
+      max-width: 350px
+      top: -20px
+      right: -60px
+
+  .bonuses-text-three .box-text
+    max-width: 700px
+
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px)
   .card-casino
@@ -79,6 +95,20 @@
 
   .main .box-text
     font-size: 16px
+
+  .bonuses-text-three h2
+    margin: 0 0 30px
+
+  .bonuses-text-three h3
+    font-size: 20px
+
+  .bonuses-text-img
+    max-width: 400px
+    top: 0
+
+  .bonuses-text-three .box-text
+    font-size: 16px
+
 
 @media only screen and (max-width: 992px)
   header
@@ -140,6 +170,9 @@
   .menu-page li a
     padding: 10px 20px
 
+  .bonuses-text-three .box-text
+    max-width: 550px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
   h1
@@ -195,6 +228,23 @@
     display: none
 
   .main .box-text h3
+    font-size: 18px
+    line-height: normal
+
+  .slot-two .slot-img
+    top: 0
+    right: 0
+
+  .bonuses-text-three .box-text
+    max-width: none
+
+  .bonuses-text-img
+    margin: 20px auto 0
+    top: 0
+    right: 0
+    position: relative
+
+  .bonuses-text-three h3
     font-size: 18px
     line-height: normal
 
@@ -275,6 +325,13 @@
   .col-3
     width: 50%
 
+  .form-filter label .btn-clear
+    right: -12px
+
+  .btn-clear
+    width: 10px
+    height: 10px
+
 @media only screen and (max-width: 480px)
   h1
     font-size: 40px
@@ -286,6 +343,22 @@
 
   .bonuses-text-two, .cards-pokies
     padding: 30px 0
+
+  .list-pagination li:first-child
+    margin: 0 7px 0 0
+
+  .list-pagination li:last-child
+    margin: 0 0 0 7px
+
+  .list-pagination li:first-child a, .list-pagination li:last-child a
+    width: 85px
+    height: 30px
+
+  .list-pagination li:first-child a .svg-icon
+    margin: 0 5px 0 0
+
+  .list-pagination li:last-child a .svg-icon
+    margin: 0 0 0 5px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px)

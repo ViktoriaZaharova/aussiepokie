@@ -264,6 +264,13 @@ h2
     background: $accent
     color: #fff
 
+.btn-grey
+  background: #263238
+  color: #fff
+  &:hover
+    background: $accent
+    color: #fff
+
 .svg-icon
   display: inline-block
   width: 100%
@@ -647,6 +654,7 @@ header
     line-height: 21px
     max-width: 713px
     width: 100%
+
     ul
       li
         margin: 0 0 13px
@@ -921,7 +929,22 @@ footer
     margin: 0 -42.5px
   .col-3
     padding: 0 42.5px
+  label
+    position: relative
+    .btn-clear
+      position: absolute
+      right: -27px
+      top: 50%
+      transform: translate(0,-50%)
+  .btn
+    margin: 0 auto
 
+.btn-clear
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 14px
+  height: 14px
 
 .cards-pokies
   padding: 100px 0
@@ -1019,6 +1042,96 @@ footer
       &:hover
         color: $accent
 
+.list-pagination
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  li
+    &:first-child, &:last-child
+      a
+        color: #fff
+        background: $accent
+        width: 95px
+        height: 40px
+        border-radius: 20px
+
+        .svg-icon
+          width: 5px
+          height: 11px
+          margin: 0 10px 0 0
+          fill: #fff
+    &:first-child
+      margin: 0 30px 0 0
+
+    &:last-child
+      margin: 0 0 0 30px
+      a
+        .svg-icon
+          margin: 0 0 0 10px
+    a
+      font-size: 10px
+      font-weight: bold
+      text-transform: uppercase
+      color: #263238
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 22px
+      height: 22px
+      border-radius: 50%
+    .active
+      color: #fff
+      background: $accent
+
+.slot-two
+  &:before
+    display: none
+  .slot-img
+    max-width: 476px
+    top: -150px
+    right: -180px
+  .box-text
+    font-weight: bold
+    max-width: 852px
+    h3
+      font-size: 24px
+      margin: 0 0 30px
+      line-height: 28px
+
+
+.bonuses-text-three
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translate(-50%,0)
+    max-width: 1320px
+    width: calc(100% - 30px)
+    background: $accent
+    height: 1px
+  .box-text
+    max-width: 852px
+    width: 100%
+    font-weight: bold
+    font-size: 18px
+    line-height: 21px
+  h3
+    font-size: 24px
+    line-height: 28px
+    margin: 0 0 30px
+  h2
+    margin: 0 0 65px
+
+.bonuses-text-img
+  max-width: 563px
+  width: 100%
+  position: absolute
+  right: -30px
+  top: -50px
+  z-index: -1
 
 @import "media"
 // Всегда в конце

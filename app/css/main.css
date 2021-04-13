@@ -293,6 +293,13 @@ h2 {
     background: #FA8D03;
     color: #fff; }
 
+.btn-grey {
+  background: #263238;
+  color: #fff; }
+  .btn-grey:hover {
+    background: #FA8D03;
+    color: #fff; }
+
 .svg-icon {
   display: inline-block;
   width: 100%;
@@ -986,6 +993,31 @@ footer {
 .form-filter .col-3 {
   padding: 0 42.5px; }
 
+.form-filter label {
+  position: relative; }
+  .form-filter label .btn-clear {
+    position: absolute;
+    right: -27px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%); }
+
+.form-filter .btn {
+  margin: 0 auto; }
+
+.btn-clear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 14px;
+  height: 14px; }
+
 .cards-pokies {
   padding: 100px 0; }
   .cards-pokies .card-load {
@@ -1091,6 +1123,105 @@ footer {
     .menu-page li a:hover {
       color: #FA8D03; }
 
+.list-pagination {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .list-pagination li:first-child a, .list-pagination li:last-child a {
+    color: #fff;
+    background: #FA8D03;
+    width: 95px;
+    height: 40px;
+    border-radius: 20px; }
+    .list-pagination li:first-child a .svg-icon, .list-pagination li:last-child a .svg-icon {
+      width: 5px;
+      height: 11px;
+      margin: 0 10px 0 0;
+      fill: #fff; }
+  .list-pagination li:first-child {
+    margin: 0 30px 0 0; }
+  .list-pagination li:last-child {
+    margin: 0 0 0 30px; }
+    .list-pagination li:last-child a .svg-icon {
+      margin: 0 0 0 10px; }
+  .list-pagination li a {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #263238;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%; }
+  .list-pagination li .active {
+    color: #fff;
+    background: #FA8D03; }
+
+.slot-two:before {
+  display: none; }
+
+.slot-two .slot-img {
+  max-width: 476px;
+  top: -150px;
+  right: -180px; }
+
+.slot-two .box-text {
+  font-weight: bold;
+  max-width: 852px; }
+  .slot-two .box-text h3 {
+    font-size: 24px;
+    margin: 0 0 30px;
+    line-height: 28px; }
+
+.bonuses-text-three {
+  position: relative; }
+  .bonuses-text-three:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    max-width: 1320px;
+    width: calc(100% - 30px);
+    background: #FA8D03;
+    height: 1px; }
+  .bonuses-text-three .box-text {
+    max-width: 852px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px; }
+  .bonuses-text-three h3 {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 30px; }
+  .bonuses-text-three h2 {
+    margin: 0 0 65px; }
+
+.bonuses-text-img {
+  max-width: 563px;
+  width: 100%;
+  position: absolute;
+  right: -30px;
+  top: -50px;
+  z-index: -1; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1330px) {
@@ -1141,7 +1272,18 @@ footer {
       font-size: 20px; }
   .menu-page li a {
     padding: 20px;
-    font-size: 16px; } }
+    font-size: 16px; }
+  .slot-two .box-text {
+    max-width: 600px; }
+    .slot-two .box-text h3 {
+      font-size: 20px;
+      line-height: normal; }
+  .slot-two .slot-img {
+    max-width: 350px;
+    top: -20px;
+    right: -60px; }
+  .bonuses-text-three .box-text {
+    max-width: 700px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px) {
@@ -1150,6 +1292,15 @@ footer {
   .all-casino-img {
     max-width: 400px; }
   .main .box-text {
+    font-size: 16px; }
+  .bonuses-text-three h2 {
+    margin: 0 0 30px; }
+  .bonuses-text-three h3 {
+    font-size: 20px; }
+  .bonuses-text-img {
+    max-width: 400px;
+    top: 0; }
+  .bonuses-text-three .box-text {
     font-size: 16px; } }
 
 @media only screen and (max-width: 992px) {
@@ -1196,7 +1347,9 @@ footer {
     font-size: 20px;
     margin: 0 0 30px; }
   .menu-page li a {
-    padding: 10px 20px; } }
+    padding: 10px 20px; }
+  .bonuses-text-three .box-text {
+    max-width: 550px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -1243,6 +1396,19 @@ footer {
   .view-section {
     display: none; }
   .main .box-text h3 {
+    font-size: 18px;
+    line-height: normal; }
+  .slot-two .slot-img {
+    top: 0;
+    right: 0; }
+  .bonuses-text-three .box-text {
+    max-width: none; }
+  .bonuses-text-img {
+    margin: 20px auto 0;
+    top: 0;
+    right: 0;
+    position: relative; }
+  .bonuses-text-three h3 {
     font-size: 18px;
     line-height: normal; } }
 
@@ -1301,7 +1467,12 @@ footer {
   footer .logo {
     margin: 0 auto; }
   .col-3 {
-    width: 50%; } }
+    width: 50%; }
+  .form-filter label .btn-clear {
+    right: -12px; }
+  .btn-clear {
+    width: 10px;
+    height: 10px; } }
 
 @media only screen and (max-width: 480px) {
   h1 {
@@ -1311,7 +1482,18 @@ footer {
   .col-2, .col-3 {
     width: 100%; }
   .bonuses-text-two, .cards-pokies {
-    padding: 30px 0; } }
+    padding: 30px 0; }
+  .list-pagination li:first-child {
+    margin: 0 7px 0 0; }
+  .list-pagination li:last-child {
+    margin: 0 0 0 7px; }
+  .list-pagination li:first-child a, .list-pagination li:last-child a {
+    width: 85px;
+    height: 30px; }
+  .list-pagination li:first-child a .svg-icon {
+    margin: 0 5px 0 0; }
+  .list-pagination li:last-child a .svg-icon {
+    margin: 0 0 0 5px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
