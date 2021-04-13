@@ -146,7 +146,9 @@ input, textarea, select {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .owl-carousel button.owl-dot {
   cursor: pointer;
@@ -641,10 +643,10 @@ header {
     line-height: 21px;
     max-width: 713px;
     width: 100%; }
-    .slot .box-text .btn-load {
-      margin: 95px 0 0; }
     .slot .box-text ul li {
       margin: 0 0 13px; }
+  .slot .btn-load {
+    margin: 95px 0 0; }
 
 .slot-img {
   position: absolute;
@@ -857,44 +859,234 @@ footer {
       .home-menu li a:hover {
         color: #FA8D03; }
 
+.mobile-menu {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  background: #161648;
+  color: #fff;
+  padding: 30px;
+  overflow-y: auto; }
+  .mobile-menu .logo {
+    margin: 0 auto;
+    padding: 0 0 20px;
+    border-bottom: 1px solid rgba(250, 141, 3, 0.7);
+    max-width: none; }
+  .mobile-menu .menu {
+    margin: 30px 0; }
+    .mobile-menu .menu li {
+      width: 100%;
+      margin: 0 0 20px; }
+  .mobile-menu .dropdown-menu {
+    position: relative;
+    top: 0;
+    -webkit-transform: none;
+            transform: none;
+    right: 0;
+    left: 0; }
+
+.btn-close {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  cursor: pointer; }
+  .btn-close:before, .btn-close:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #FA8D03;
+    top: 0;
+    left: 10px; }
+  .btn-close:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .btn-close:after {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1330px) {
+  .menu {
+    font-size: 14px; }
+    .menu li {
+      margin: 0 15px 0 0; } }
+
+@media only screen and (max-width: 1240px) {
+  .card-casino {
+    padding: 20px 0; }
+  .card-casino-logo {
+    margin: 0; }
+  .card-casino-offer {
+    margin: 0 auto;
+    font-size: 16px;
+    max-width: 205px; }
+  .card-casino-info {
+    font-size: 16px;
+    width: 240px; }
+  .card-casino-rating {
+    font-size: 16px; }
+  .card-casino-number {
+    font-size: 24px;
+    width: 35px; }
+  .slot-img {
+    max-width: 500px; } }
+
 @media only screen and (max-width: 1200px) {
-  /**/ }
+  .logo {
+    max-width: 120px; }
+  .dropdown-menu {
+    top: calc(100% + 28px); }
+  .menu {
+    font-size: 12px; }
+  .catalog-casino h2 {
+    font-size: 50px; }
+    .catalog-casino h2 span {
+      font-size: 24px; }
+  .slot .box-text {
+    font-size: 16px;
+    max-width: 620px; } }
 
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 1100px) {
+  .card-casino .button-group {
+    margin: 10px auto 0; } }
+
 @media only screen and (max-width: 992px) {
-  /**/ }
+  header .menu {
+    display: none; }
+  .btn-burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .col-2 {
+    width: 25%; }
+  .news {
+    padding: 60px 0 40px; }
+    .news h2 {
+      font-size: 40px;
+      margin: 0 auto 30px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /**/ }
+  h1 {
+    font-size: 60px; }
+    h1 span {
+      font-size: 40px; }
+  .card-casino-rating {
+    width: 100%;
+    text-align: center;
+    margin: 10px auto; }
+  .list-rating {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .links-play-now {
+    font-size: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+  .play-now-carousel__content {
+    width: 100%; }
+  .slot {
+    padding: 80px 0 50px; }
+  .slot .btn-load {
+    margin: 40px 0 0; }
+  .slot-img {
+    margin: 20px auto;
+    position: relative;
+    right: 0;
+    top: 0; }
+  .slot .box-text {
+    max-width: none; }
+  .col-2 {
+    width: 33.3%; }
+  .news-card {
+    margin: 0 auto 30px; }
+  .home-menu {
+    margin: 0 0 0 auto; }
+    .home-menu li {
+      margin: 0 20px 0 0; } }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 576px) {
+  .card-casino-offer, .card-casino-info {
+    width: 100%;
+    margin: 10px auto;
+    max-width: none; }
+  .card-casino-info {
+    text-align: center; }
+  .card-casino-logo {
+    margin: 0 auto; }
+  .card-casino {
+    position: relative; }
+  .card-casino-number {
+    position: absolute;
+    top: 40px;
+    left: 10px; }
+  .catalog-casino h2 {
+    font-size: 40px; }
+    .catalog-casino h2 span {
+      font-size: 18px; }
+  .play-now-carousel-item {
+    height: 400px; }
+  .bonuses-text h2 {
+    font-size: 24px; }
+  .bonuses-text .box-text {
+    font-size: 16px; }
+  .poker-play-australies h2 {
+    margin: 0 auto 30px; }
+  .poker-play-australies h3 {
+    font-size: 20px; }
+  .top-free-pokies-title {
+    padding: 20px 0; }
+    .top-free-pokies-title h2 {
+      font-size: 30px; }
+  .owl-carousel button.owl-dot {
+    margin: 0 0 5px 6px; }
+  .owl-carousel button.owl-dot:first-child {
+    margin: 0 0 5px 0; }
+  .faq h2 {
+    font-size: 30px; }
+  .col-2 {
+    width: 50%; }
+  .news h2 {
+    font-size: 35px; }
+  .home-menu {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 10px auto 0;
+    font-size: 11px; }
+    .home-menu li {
+      margin: 0; }
+  footer .logo {
+    margin: 0 auto; } }
+
 @media only screen and (max-width: 480px) {
-  /**/ }
+  h1 {
+    font-size: 40px; }
+    h1 span {
+      font-size: 30px; }
+  .col-2 {
+    width: 100%; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  /**/ }
-
-/*==========  Mobile First  ==========*/
-/* Custom, iPhone Retina */
-@media only screen and (min-width: 320px) {
-  /**/ }
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
-  /**/ }
-
-/* Small Devices, Tablets */
-@media only screen and (min-width: 768px) {
-  /**/ }
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
-  /**/ }
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px) {
   /**/ }
