@@ -30,6 +30,18 @@ $('.top-free-pokies-slider').owlCarousel({
     responsive: {0: {items: 1}, 490: {items: 2}, 720: {items: 3}, 965: {items: 5}}
 });
 
+$('.news-slider').owlCarousel({
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    margin: 0,
+    loop: false,
+    dots: false,
+    autoplay:true,
+    autoplayTimeout:10000,
+    autoplayHoverPause:true,
+    responsive: {0: {items: 1}, 490: {items: 2}, 720: {items: 3}, 965: {items: 4}, 1200: {items: 5}}
+});
+
 // accordeon
 function accordeon() {
     var panel = $('.panel_heading');
@@ -51,4 +63,18 @@ $('.btn-burger').on('click', function () {
 
 $('.btn-close').on('click', function () {
     $('.mobile-menu').fadeOut();
+});
+
+$('.btn-load-text').on('click', function (e) {
+    e.preventDefault();
+    $(this).siblings('.text-hidden').fadeIn();
+});
+
+$('.btn-load-card').on('click', function (e) {
+    e.preventDefault();
+    $(this).parents('.card-load-wrapper').find('.card-load:hidden').slice(0, 5).slideDown();
+});
+
+$('.view-section__head').on('click', function () {
+   $(this).toggleClass('click').siblings('.view-section__body').fadeToggle();
 });

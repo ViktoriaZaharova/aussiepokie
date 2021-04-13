@@ -98,11 +98,40 @@ input, textarea, select {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bold;
   border: none;
-    border-radius: 0; }
+    border-radius: 0;
+  width: 100%;
+  color: #263238; }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
+    color: #263238; }
+  input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+    color: #263238; }
+  input::-ms-input-placeholder, textarea::-ms-input-placeholder, select::-ms-input-placeholder {
+    color: #263238; }
+  input::placeholder, textarea::placeholder, select::placeholder {
+    color: #263238; }
   input:hover, input:focus, textarea:hover, textarea:focus, select:hover, select:focus {
     outline: none; }
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #fff url("../img/select.svg") no-repeat 96% center;
+    background-size: 12px;
+  border: 1px solid #1B222B;
+    border-radius: 6px;
+  height: 44px;
+  padding: 0 30px 0 17px;
+  color: #263238;
+  cursor: pointer; }
+
+label {
+  width: 100%;
+  display: block;
+  margin: 0 0 28px; }
 
 .btn-burger {
   width: 20px;
@@ -307,6 +336,10 @@ h2 {
   width: 20%;
   padding: 0 15px; }
 
+.col-3 {
+  width: 33.3%;
+  padding: 0 15px; }
+
 header {
   background: #161648;
   color: #fff;
@@ -409,6 +442,11 @@ header {
   .card-casino:last-child {
     margin: 0; }
 
+.card-load {
+  display: none; }
+  .card-load:nth-child(-n+10) {
+    display: block; }
+
 .card-casino-info {
   font-size: 20px;
   line-height: 23px; }
@@ -495,6 +533,10 @@ header {
     line-height: 21px; }
     .bonuses-text .box-text:last-child {
       margin: 0; }
+  .bonuses-text ul li {
+    margin: 0 0 20px; }
+    .bonuses-text ul li:last-child {
+      margin: 0; }
 
 .poker-play-australies {
   padding: 50px 0 57px;
@@ -558,13 +600,14 @@ header {
     border-radius: 20px;
   margin: 0 auto 11px; }
 
-.faq h2 {
-  margin: 0 0 29px;
-  text-align: left;
-  font-size: 38px; }
-
-.faq .container {
-  max-width: 1175px; }
+.faq {
+  padding: 0 0 57px; }
+  .faq h2 {
+    margin: 0 0 29px;
+    text-align: left;
+    font-size: 38px; }
+  .faq .container {
+    max-width: 1175px; }
 
 .panel_heading {
   width: 100%;
@@ -669,7 +712,7 @@ header {
 
 .list-dots {
   list-style: disc;
-  padding: 0 0 0 30px; }
+  padding: 0 0 0 50px; }
 
 .top-free-pokies-title {
   background: #FA8D03;
@@ -742,7 +785,7 @@ header {
   padding: 73px 0 56px; }
 
 .news {
-  padding: 79px 0 44px; }
+  padding: 22px 0 44px; }
   .news h2 {
     color: #000000; }
   .news .btn-load {
@@ -920,6 +963,134 @@ footer {
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg); }
 
+.text-hidden {
+  font-size: 18px;
+  display: none; }
+  .text-hidden p {
+    margin: 0 0 20px; }
+    .text-hidden p:last-child {
+      margin: 0; }
+
+.catalog-casino-top h2 {
+  font-size: 40px; }
+
+.bonuses-text-two {
+  background: transparent;
+  padding: 70px 0; }
+  .bonuses-text-two .container {
+    max-width: 1350px; }
+
+.form-filter .row {
+  margin: 0 -42.5px; }
+
+.form-filter .col-3 {
+  padding: 0 42.5px; }
+
+.cards-pokies {
+  padding: 100px 0; }
+  .cards-pokies .card-load {
+    margin-bottom: 50px; }
+  .cards-pokies .btn-load {
+    margin: 0 auto; }
+
+.catalog-casino-two .card-load {
+  display: none; }
+  .catalog-casino-two .card-load:nth-child(-n+6) {
+    display: block; }
+
+.main {
+  padding: 110px 0 20px;
+  position: relative; }
+  .main h1 {
+    text-shadow: none;
+    font-size: 40px;
+    margin: 0 0 65px;
+    padding: 0;
+    line-height: normal; }
+  .main .box-text {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+    max-width: 825px;
+    width: 100%; }
+    .main .box-text h3 {
+      font-size: 24px;
+      margin: 0 0 40px;
+      line-height: 28px; }
+
+.main-content {
+  position: relative;
+  z-index: 1; }
+
+.all-casino-img {
+  position: absolute;
+  right: -15px;
+  top: 0;
+  max-width: 500px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.view-section {
+  position: fixed;
+  right: 0;
+  top: 110px;
+  max-width: 466px;
+  width: 100%;
+  z-index: 3; }
+
+.view-section__head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  padding: 23px 30px;
+  background: #161648;
+  cursor: pointer; }
+  .view-section__head .svg-icon {
+    width: 10px;
+    height: 10px;
+    fill: #fff; }
+  .view-section__head h4 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold; }
+
+.view-section__head.click .svg-icon {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  fill: #FA8D03; }
+
+.view-section__body {
+  background: rgba(219, 219, 219, 0.5);
+  width: 100%;
+  display: none; }
+
+.menu-page {
+  width: 100%; }
+  .menu-page li a {
+    width: 100%;
+    padding: 27px 29px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000; }
+    .menu-page li a:hover {
+      color: #FA8D03; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1330px) {
@@ -961,12 +1132,25 @@ footer {
       font-size: 24px; }
   .slot .box-text {
     font-size: 16px;
-    max-width: 620px; } }
+    max-width: 620px; }
+  .main-content {
+    max-width: 700px; }
+  .view-section {
+    max-width: 300px; }
+    .view-section h4 {
+      font-size: 20px; }
+  .menu-page li a {
+    padding: 20px;
+    font-size: 16px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px) {
   .card-casino .button-group {
-    margin: 10px auto 0; } }
+    margin: 10px auto 0; }
+  .all-casino-img {
+    max-width: 400px; }
+  .main .box-text {
+    font-size: 16px; } }
 
 @media only screen and (max-width: 992px) {
   header .menu {
@@ -977,11 +1161,42 @@ footer {
     display: flex; }
   .col-2 {
     width: 25%; }
+  .faq {
+    padding: 0 0 30px; }
   .news {
-    padding: 60px 0 40px; }
+    padding: 20px 0 40px; }
     .news h2 {
       font-size: 40px;
-      margin: 0 auto 30px; } }
+      margin: 0 auto 30px; }
+  .list-dots {
+    padding: 0 0 0 30px; }
+  .form-filter .col-3 {
+    padding: 0 15px; }
+  .form-filter .row {
+    margin: 0 -15px; }
+  .bonuses-text-two, .cards-pokies {
+    padding: 50px 0; }
+  .text-hidden {
+    font-size: 16px; }
+  .catalog-casino h2 {
+    font-size: 40px; }
+  .all-casino-img {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 30px auto 0; }
+  .main-content {
+    max-width: none; }
+  .main {
+    padding: 60px 0 20px; }
+    .main h1 {
+      font-size: 30px;
+      margin: 0 0 45px; }
+  .main .box-text h3 {
+    font-size: 20px;
+    margin: 0 0 30px; }
+  .menu-page li a {
+    padding: 10px 20px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -1022,7 +1237,14 @@ footer {
   .home-menu {
     margin: 0 0 0 auto; }
     .home-menu li {
-      margin: 0 20px 0 0; } }
+      margin: 0 20px 0 0; }
+  .catalog-casino h2 {
+    font-size: 30px; }
+  .view-section {
+    display: none; }
+  .main .box-text h3 {
+    font-size: 18px;
+    line-height: normal; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px) {
@@ -1041,7 +1263,7 @@ footer {
     top: 40px;
     left: 10px; }
   .catalog-casino h2 {
-    font-size: 40px; }
+    font-size: 30px; }
     .catalog-casino h2 span {
       font-size: 18px; }
   .play-now-carousel-item {
@@ -1077,15 +1299,19 @@ footer {
     .home-menu li {
       margin: 0; }
   footer .logo {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .col-3 {
+    width: 50%; } }
 
 @media only screen and (max-width: 480px) {
   h1 {
     font-size: 40px; }
     h1 span {
       font-size: 30px; }
-  .col-2 {
-    width: 100%; } }
+  .col-2, .col-3 {
+    width: 100%; }
+  .bonuses-text-two, .cards-pokies {
+    padding: 30px 0; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
