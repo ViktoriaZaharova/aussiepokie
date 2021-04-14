@@ -3,12 +3,15 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1330px)
+@media only screen and (max-width: 1350px)
   .menu
     font-size: 14px
 
     li
       margin: 0 15px 0 0
+
+  .casino-details-rating
+    font-size: 18px
 
 @media only screen and (max-width: 1240px)
   .card-casino
@@ -35,6 +38,11 @@
 
   .slot-img
     max-width: 500px
+
+  .owl-casino-item
+    padding: 0
+    .box-text
+      margin: 0 auto
 
 @media only screen and (max-width: 1200px)
   .logo
@@ -83,6 +91,13 @@
   .bonuses-text-three .box-text
     max-width: 700px
 
+  .deposit-text-two .deposit-text-img
+    max-width: 300px
+    top: 0
+    right: -40px
+
+  .deposit-text-two .box-text
+    max-width: 600px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px)
@@ -173,6 +188,42 @@
   .bonuses-text-three .box-text
     max-width: 550px
 
+  .deposit-text .box-text
+    font-size: 18px
+
+  .deposit-text-two .box-text h3
+    font-size: 22px
+    margin: 0 0 30px
+
+  .owl-casino-item
+    justify-content: space-between
+    h3
+      min-width: auto
+      width: 100%
+      margin: 0 auto 10px
+    .box-text
+      margin: 0
+
+  .casino-page-info
+    max-width: 100%
+    padding: 0 0 20px
+    border-bottom: 1px solid $accent
+
+  .list-device
+    margin: 40px 0 0
+
+  .casino-page-rating
+    max-width: 50%
+    padding: 0 20px
+    border: none
+
+  .casino-page-partners
+    max-width: 50%
+    padding: 0 20px
+
+  .casino-page
+    padding: 60px 0 40px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
   h1
@@ -247,6 +298,37 @@
   .bonuses-text-three h3
     font-size: 18px
     line-height: normal
+
+  .deposit-text .box-text
+    font-size: 16px
+
+  .deposit-text-img, .deposit-text-two .deposit-text-img
+    position: relative
+    max-width: 400px
+    margin: 30px auto 0
+    top: 0
+    right: 0
+
+  .deposit-text-two .box-text h3
+    font-size: 18px
+
+  .owl-casino-item
+    h3
+      font-size: 20px
+
+  .casino-page-rating
+    max-width: 100%
+    padding: 0
+
+  .casino-details-rating
+    margin: 0 0 20px
+
+  .casino-page-partners
+    max-width: none
+    padding: 0
+
+  .casino-page h1
+    font-size: 30px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px)
@@ -359,6 +441,13 @@
 
   .list-pagination li:last-child a .svg-icon
     margin: 0 0 0 5px
+
+  .owl-casino-item
+    .box-text
+      max-width: none
+      margin: 10px auto
+    .btn
+      margin: 0 auto
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px)

@@ -400,6 +400,8 @@ header {
     background-size: contain; }
 
 .dropdown-menu {
+  text-transform: uppercase;
+  font-weight: bold;
   display: none;
   position: absolute;
   left: 50%;
@@ -411,6 +413,8 @@ header {
   background: #161648; }
   .dropdown-menu a {
     margin: 0 0 18px; }
+    .dropdown-menu a:hover {
+      color: #FA8D03; }
     .dropdown-menu a:last-child {
       margin: 0; }
 
@@ -493,6 +497,8 @@ header {
     height: 27px; }
     .list-rating li .svg-icon {
       fill: none; }
+    .list-rating li img {
+      width: 100%; }
 
 .card-casino-rating {
   font-size: 20px;
@@ -544,6 +550,8 @@ header {
     margin: 0 0 20px; }
     .bonuses-text ul li:last-child {
       margin: 0; }
+  .bonuses-text > *:not(img) {
+    z-index: 1; }
 
 .poker-play-australies {
   padding: 50px 0 57px;
@@ -1222,13 +1230,317 @@ footer {
   top: -50px;
   z-index: -1; }
 
+.deposit-text .box-text {
+  font-size: 24px;
+  line-height: normal;
+  position: relative;
+  z-index: 1; }
+
+.deposit-text ul {
+  margin: 20px 0;
+  font-size: 18px; }
+  .deposit-text ul li {
+    margin: 0 0 10px 0; }
+    .deposit-text ul li:last-child {
+      margin: 0; }
+
+.font-bold {
+  font-weight: bold; }
+
+.deposit-text-img {
+  max-width: 1440px;
+  right: -150px;
+  top: 0;
+  position: absolute;
+  z-index: -1; }
+
+.dropdown-btn {
+  width: 100%;
+  padding: 0 17px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  height: 44px;
+  border: 1px solid #1B222B;
+    border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  cursor: pointer; }
+
+.dropdown-filter {
+  margin: 0 0 27px; }
+  .dropdown-filter .dropdown-menu {
+    top: 100%;
+    background: #fff;
+    width: 100%;
+    border: 1px solid #1B222B;
+      border-top: none; }
+    .dropdown-filter .dropdown-menu a {
+      color: #FA8D03; }
+      .dropdown-filter .dropdown-menu a:hover {
+        color: #000; }
+
+.deposit-text-two {
+  position: relative; }
+  .deposit-text-two:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    max-width: 1320px;
+    width: calc(100% - 30px);
+    background: #FA8D03;
+    height: 1px; }
+  .deposit-text-two .box-text {
+    font-size: 18px;
+    max-width: 852px; }
+    .deposit-text-two .box-text h3 {
+      font-size: 24px;
+      margin: 0 0 40px; }
+  .deposit-text-two .deposit-text-img {
+    max-width: 551px;
+    top: -60px;
+    right: -100px; }
+
+.casino-page {
+  padding: 88px 0 55px; }
+  .casino-page .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .casino-page h1 {
+    text-align: center;
+    margin: 7px auto 45px;
+    text-shadow: none;
+    font-size: 48px;
+    padding: 0; }
+  .casino-page .list-rating {
+    margin: 0;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .casino-page .list-rating li {
+      width: 50px;
+      height: 50px; }
+
+.btn-next {
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  fill: #000; }
+
+.casino-page-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.casino-page-info {
+  max-width: 33.3%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 40px; }
+  .casino-page-info .btn {
+    font-size: 16px;
+    font-weight: 900;
+    height: 42px; }
+
+.logo-casino {
+  max-width: 198px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 21px; }
+  .logo-casino img {
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
+
+.list-device {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 82px 0 0; }
+  .list-device li {
+    margin: 0 13px 0 0; }
+    .list-device li:last-child {
+      margin: 0; }
+
+.pc-icon {
+  width: 52px;
+  height: 49px; }
+
+.apple-icon {
+  width: 33px;
+  height: 40px; }
+
+.android-icon {
+  width: 40px;
+  height: 40px; }
+
+.casino-page-rating {
+  padding: 0 50px 0 18px;
+  max-width: 33.3%;
+  width: 100%;
+  border-left: 2px solid #FA8D03;
+  margin: 0 0 40px; }
+
+.casino-details-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 46px;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 300; }
+  .casino-details-rating:last-child {
+    margin: 0; }
+  .casino-details-rating .list-rating {
+    width: auto; }
+    .casino-details-rating .list-rating li {
+      width: 31px;
+      height: 31px; }
+
+.casino-page-partners {
+  max-width: 33.3%;
+  width: 100%;
+  margin: 0 0 40px; }
+
+.casino-page-partners-box {
+  margin: 0 0 30px;
+  font-size: 18px;
+  color: #161648;
+  width: 100%; }
+  .casino-page-partners-box:last-child {
+    margin: 0; }
+  .casino-page-partners-box p {
+    font-size: 18px; }
+
+.casino-page-partners-slider__item {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .casino-page-partners-slider__item img {
+    max-height: 100%;
+    width: auto; }
+
+.casino-page-partners-slider .casino-page-partners-slider__item img {
+  width: auto; }
+
+.casino-page-games-slider .casino-page-partners-slider__item {
+  height: 80px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  cursor: pointer;
+  fill: #8C8C8C; }
+  .casino-page-games-slider .casino-page-partners-slider__item:hover {
+    fill: #000; }
+
+.owl-casino .owl-dots {
+  margin: 27px auto 0; }
+  .owl-casino .owl-dots button.owl-dot {
+    border: 1px solid #263238; }
+
+.owl-casino-item {
+  width: 100%;
+  padding: 0 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .owl-casino-item .btn {
+    height: 41px;
+    font-size: 16px;
+    font-weight: 900; }
+  .owl-casino-item .box-text {
+    text-align: center;
+    max-width: 245px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 124px 0 165px; }
+  .owl-casino-item h3 {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    min-width: 330px;
+    text-align: center; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1330px) {
+@media only screen and (max-width: 1350px) {
   .menu {
     font-size: 14px; }
     .menu li {
-      margin: 0 15px 0 0; } }
+      margin: 0 15px 0 0; }
+  .casino-details-rating {
+    font-size: 18px; } }
 
 @media only screen and (max-width: 1240px) {
   .card-casino {
@@ -1248,7 +1560,11 @@ footer {
     font-size: 24px;
     width: 35px; }
   .slot-img {
-    max-width: 500px; } }
+    max-width: 500px; }
+  .owl-casino-item {
+    padding: 0; }
+    .owl-casino-item .box-text {
+      margin: 0 auto; } }
 
 @media only screen and (max-width: 1200px) {
   .logo {
@@ -1283,7 +1599,13 @@ footer {
     top: -20px;
     right: -60px; }
   .bonuses-text-three .box-text {
-    max-width: 700px; } }
+    max-width: 700px; }
+  .deposit-text-two .deposit-text-img {
+    max-width: 300px;
+    top: 0;
+    right: -40px; }
+  .deposit-text-two .box-text {
+    max-width: 600px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px) {
@@ -1349,7 +1671,37 @@ footer {
   .menu-page li a {
     padding: 10px 20px; }
   .bonuses-text-three .box-text {
-    max-width: 550px; } }
+    max-width: 550px; }
+  .deposit-text .box-text {
+    font-size: 18px; }
+  .deposit-text-two .box-text h3 {
+    font-size: 22px;
+    margin: 0 0 30px; }
+  .owl-casino-item {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .owl-casino-item h3 {
+      min-width: auto;
+      width: 100%;
+      margin: 0 auto 10px; }
+    .owl-casino-item .box-text {
+      margin: 0; }
+  .casino-page-info {
+    max-width: 100%;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #FA8D03; }
+  .list-device {
+    margin: 40px 0 0; }
+  .casino-page-rating {
+    max-width: 50%;
+    padding: 0 20px;
+    border: none; }
+  .casino-page-partners {
+    max-width: 50%;
+    padding: 0 20px; }
+  .casino-page {
+    padding: 60px 0 40px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -1410,7 +1762,29 @@ footer {
     position: relative; }
   .bonuses-text-three h3 {
     font-size: 18px;
-    line-height: normal; } }
+    line-height: normal; }
+  .deposit-text .box-text {
+    font-size: 16px; }
+  .deposit-text-img, .deposit-text-two .deposit-text-img {
+    position: relative;
+    max-width: 400px;
+    margin: 30px auto 0;
+    top: 0;
+    right: 0; }
+  .deposit-text-two .box-text h3 {
+    font-size: 18px; }
+  .owl-casino-item h3 {
+    font-size: 20px; }
+  .casino-page-rating {
+    max-width: 100%;
+    padding: 0; }
+  .casino-details-rating {
+    margin: 0 0 20px; }
+  .casino-page-partners {
+    max-width: none;
+    padding: 0; }
+  .casino-page h1 {
+    font-size: 30px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px) {
@@ -1493,7 +1867,12 @@ footer {
   .list-pagination li:first-child a .svg-icon {
     margin: 0 5px 0 0; }
   .list-pagination li:last-child a .svg-icon {
-    margin: 0 0 0 5px; } }
+    margin: 0 0 0 5px; }
+  .owl-casino-item .box-text {
+    max-width: none;
+    margin: 10px auto; }
+  .owl-casino-item .btn {
+    margin: 0 auto; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

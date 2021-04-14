@@ -365,6 +365,8 @@ header
       size: contain
 
 .dropdown-menu
+  text-transform: uppercase
+  font-weight: bold
   display: none
   position: absolute
   left: 50%
@@ -376,6 +378,8 @@ header
 
   a
     margin: 0 0 18px
+    &:hover
+      color: $accent
 
     &:last-child
       margin: 0
@@ -463,6 +467,8 @@ header
     height: 27px
     .svg-icon
       fill: none
+    img
+      width: 100%
 
 .card-casino-rating
   font-size: 20px
@@ -515,6 +521,9 @@ header
       margin: 0 0 20px
       &:last-child
         margin: 0
+  >*:not(img)
+    z-index: 1
+
 
 .poker-play-australies
   padding: 50px 0 57px
@@ -1132,6 +1141,252 @@ footer
   right: -30px
   top: -50px
   z-index: -1
+
+.deposit-text
+  .box-text
+    font-size: 24px
+    line-height: normal
+    position: relative
+    z-index: 1
+  ul
+    margin: 20px 0
+    font-size: 18px
+    li
+      margin: 0 0 10px 0
+      &:last-child
+        margin: 0
+
+.font-bold
+  font-weight: bold
+
+.deposit-text-img
+  max-width: 1440px
+  right: -150px
+  top: 0
+  position: absolute
+  z-index: -1
+
+.dropdown-btn
+  width: 100%
+  padding: 0 17px
+  text-transform: uppercase
+  font-size: 14px
+  font-weight: bold
+  height: 44px
+  border: 1px solid #1B222B
+    radius: 6px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  cursor: pointer
+
+.dropdown-filter
+  margin: 0 0 27px
+  .dropdown-menu
+    top: 100%
+    background: #fff
+    width: 100%
+    border: 1px solid #1B222B
+      top: none
+    a
+      color: $accent
+      &:hover
+        color: #000
+
+.deposit-text-two
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translate(-50%,0)
+    max-width: 1320px
+    width: calc(100% - 30px)
+    background: $accent
+    height: 1px
+  .box-text
+    font-size: 18px
+    max-width: 852px
+    h3
+      font-size: 24px
+      margin: 0 0 40px
+  .deposit-text-img
+    max-width: 551px
+    top: -60px
+    right: -100px
+
+.casino-page
+  padding: 88px 0 55px
+  .container
+    flex-direction: column
+    align-items: flex-start
+  h1
+    text-align: center
+    margin: 7px auto 45px
+    text-shadow: none
+    font-size: 48px
+    padding: 0
+  .list-rating
+    margin: 0
+    width: 100%
+    justify-content: center
+    li
+      width: 50px
+      height: 50px
+
+.btn-next
+  width: 24px
+  height: 24px
+  display: flex
+  align-items: center
+  justify-content: center
+  fill: #000
+
+.casino-page-wrapper
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+.casino-page-info
+  max-width: 33.3%
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 0 0 40px
+  .btn
+    font-size: 16px
+    font-weight: 900
+    height: 42px
+
+.logo-casino
+  max-width: 198px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 auto 21px
+
+  img
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+
+.list-device
+  display: flex
+  align-items: center
+  margin: 82px 0 0
+  li
+    margin: 0 13px 0 0
+    &:last-child
+      margin: 0
+
+.pc-icon
+  width: 52px
+  height: 49px
+
+.apple-icon
+  width: 33px
+  height: 40px
+
+.android-icon
+  width: 40px
+  height: 40px
+
+.casino-page-rating
+  padding: 0 50px 0 18px
+  max-width: 33.3%
+  width: 100%
+  border-left: 2px solid $accent
+  margin: 0 0 40px
+
+.casino-details-rating
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 0 0 46px
+  width: 100%
+  font-size: 25px
+  font-weight: 300
+  &:last-child
+    margin: 0
+  .list-rating
+    width: auto
+    li
+      width: 31px
+      height: 31px
+
+.casino-page-partners
+  max-width: 33.3%
+  width: 100%
+  margin: 0 0 40px
+
+.casino-page-partners-box
+  margin: 0 0 30px
+  font-size: 18px
+  color: #161648
+  width: 100%
+  &:last-child
+    margin: 0
+  p
+    font-size: 18px
+
+.casino-page-partners-slider__item
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    max-height: 100%
+    width: auto
+
+.casino-page-partners-slider
+  .casino-page-partners-slider__item
+    img
+      width: auto
+
+.casino-page-games-slider
+  .casino-page-partners-slider__item
+    height: 80px
+    transition: .3s ease
+    cursor: pointer
+    fill: #8C8C8C
+    &:hover
+      fill: #000
+
+.owl-casino
+  .owl-dots
+    margin: 27px auto 0
+    button.owl-dot
+      border: 1px solid #263238
+
+.owl-casino-item
+  width: 100%
+  padding: 0 70px
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  //justify-content: space-around
+  .btn
+    height: 41px
+    font-size: 16px
+    font-weight: 900
+  .box-text
+    text-align: center
+    max-width: 245px
+    width: 100%
+    font-size: 18px
+    font-weight: bold
+    margin: 0 124px 0 165px
+  h3
+    font-size: 30px
+    font-weight: 900
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    min-width: 330px
+    text-align: center
+
 
 @import "media"
 // Всегда в конце

@@ -24,9 +24,9 @@ $('.top-free-pokies-slider').owlCarousel({
     // items: 5,
     loop: false,
     dots: true,
-    autoplay:true,
-    autoplayTimeout:10000,
-    autoplayHoverPause:true,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
     responsive: {0: {items: 1}, 490: {items: 2}, 720: {items: 3}, 965: {items: 5}}
 });
 
@@ -36,10 +36,46 @@ $('.news-slider').owlCarousel({
     margin: 0,
     loop: false,
     dots: false,
-    autoplay:true,
-    autoplayTimeout:10000,
-    autoplayHoverPause:true,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
     responsive: {0: {items: 1}, 490: {items: 2}, 720: {items: 3}, 965: {items: 4}, 1200: {items: 5}}
+});
+
+$('.owl-casino').owlCarousel({
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    margin: 0,
+    dots: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: false,
+    responsive: {0: {items: 1}}
+});
+
+$('.casino-page-partners-slider').owlCarousel({
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    margin: 0,
+    dots: false,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    responsive: {0: {items: 4}, 490: {items: 4}, 720: {items: 4}, 965: {items: 4}}
+});
+
+$('.casino-page-games-slider').owlCarousel({
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    margin: 0,
+    dots: false,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    responsive: {0: {items: 4}, 490: {items: 4}, 720: {items: 4}, 965: {items: 5}}
 });
 
 // accordeon
@@ -58,7 +94,7 @@ function accordeon() {
 accordeon();
 
 $('.btn-burger').on('click', function () {
-   $('.mobile-menu').fadeToggle();
+    $('.mobile-menu').fadeToggle();
 });
 
 $('.btn-close').on('click', function () {
@@ -76,5 +112,5 @@ $('.btn-load-card').on('click', function (e) {
 });
 
 $('.view-section__head').on('click', function () {
-   $(this).toggleClass('click').siblings('.view-section__body').fadeToggle();
+    $(this).toggleClass('click').siblings('.view-section__body').fadeToggle();
 });
