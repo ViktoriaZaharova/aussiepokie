@@ -114,3 +114,11 @@ $('.btn-load-card').on('click', function (e) {
 $('.view-section__head').on('click', function () {
     $(this).toggleClass('click').siblings('.view-section__body').fadeToggle();
 });
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 150) {
+        $('.view-section').addClass('fixed');
+    } else {
+        $('.view-section').removeClass('fixed');
+    }
+});

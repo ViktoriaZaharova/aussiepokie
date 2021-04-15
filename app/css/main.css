@@ -133,6 +133,18 @@ label {
   display: block;
   margin: 0 0 28px; }
 
+button {
+  padding: 0;
+  border: none;
+    border-radius: 0;
+  outline: none;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+
 .btn-burger {
   width: 20px;
   height: 16px;
@@ -283,14 +295,16 @@ h2 {
   color: #fff;
   background: #FA8D03; }
   .btn-accent:hover {
-    background: #161648;
+    -webkit-box-shadow: 0 3px 0 #c87102;
+            box-shadow: 0 3px 0 #c87102;
     color: #fff; }
 
 .btn-black-blue {
   background: #161648;
   color: #fff; }
   .btn-black-blue:hover {
-    background: #FA8D03;
+    -webkit-box-shadow: 0 3px 0 black;
+            box-shadow: 0 3px 0 black;
     color: #fff; }
 
 .btn-grey {
@@ -442,7 +456,9 @@ header {
   margin: 44px auto 0; }
 
 .card-casino {
-  margin: 0 0 4px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto 4px;
   border: 1px solid #8C8C8C;
   background: #fff;
   padding: 37px 0 59px; }
@@ -708,7 +724,7 @@ header {
 
 .slot-img {
   position: absolute;
-  right: -130px;
+  right: -160px;
   max-width: 641px;
   width: 100%;
   top: -60px;
@@ -980,7 +996,9 @@ footer {
 
 .text-hidden {
   font-size: 18px;
-  display: none; }
+  display: none;
+  margin: 30px 0 0;
+  max-width: 800px; }
   .text-hidden p {
     margin: 0 0 20px; }
     .text-hidden p:last-child {
@@ -1082,9 +1100,12 @@ footer {
   position: fixed;
   right: 0;
   top: 110px;
-  max-width: 466px;
+  max-width: 320px;
   width: 100%;
   z-index: 3; }
+
+.view-section.fixed {
+  top: 0; }
 
 .view-section__head {
   width: 100%;
@@ -1254,7 +1275,7 @@ footer {
   position: absolute;
   z-index: -1; }
 
-.dropdown-btn {
+.dropdown-filter {
   width: 100%;
   padding: 0 17px;
   text-transform: uppercase;
@@ -1272,20 +1293,12 @@ footer {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  cursor: pointer; }
-
-.dropdown-filter {
-  margin: 0 0 27px; }
-  .dropdown-filter .dropdown-menu {
-    top: 100%;
-    background: #fff;
-    width: 100%;
-    border: 1px solid #1B222B;
-      border-top: none; }
-    .dropdown-filter .dropdown-menu a {
-      color: #FA8D03; }
-      .dropdown-filter .dropdown-menu a:hover {
-        color: #000; }
+  cursor: pointer;
+  margin: 0 0 27px;
+  background: #fff; }
+  .dropdown-filter:hover {
+    background: #FA8D03;
+    color: #fff; }
 
 .deposit-text-two {
   position: relative; }
@@ -1534,6 +1547,10 @@ footer {
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1440px) {
+  .card-casino {
+    max-width: calc(100% - 30px); } }
+
 @media only screen and (max-width: 1350px) {
   .menu {
     font-size: 14px; }
@@ -1542,7 +1559,7 @@ footer {
   .casino-details-rating {
     font-size: 18px; } }
 
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 1250px) {
   .card-casino {
     padding: 20px 0; }
   .card-casino-logo {
@@ -1560,11 +1577,14 @@ footer {
     font-size: 24px;
     width: 35px; }
   .slot-img {
-    max-width: 500px; }
+    max-width: 500px;
+    right: -110px; }
   .owl-casino-item {
     padding: 0; }
     .owl-casino-item .box-text {
-      margin: 0 auto; } }
+      margin: 0 auto; }
+  .main .box-text, .bonuses-text-three .box-text, .main-content {
+    max-width: 700px; } }
 
 @media only screen and (max-width: 1200px) {
   .logo {
@@ -1604,7 +1624,9 @@ footer {
     max-width: 300px;
     top: 0;
     right: -40px; }
-  .deposit-text-two .box-text {
+  .deposit-text-two .box-text, .main .box-text {
+    max-width: 600px; }
+  .text-hidden {
     max-width: 600px; } }
 
 /* Medium Devices, Desktops */
@@ -1653,6 +1675,8 @@ footer {
     font-size: 16px; }
   .catalog-casino h2 {
     font-size: 40px; }
+  .main .box-text {
+    max-width: none; }
   .all-casino-img {
     position: relative;
     top: 0;
@@ -1701,7 +1725,18 @@ footer {
     max-width: 50%;
     padding: 0 20px; }
   .casino-page {
-    padding: 60px 0 40px; } }
+    padding: 60px 0 40px; }
+  .slot .box-text {
+    max-width: 500px; }
+  .slot-img {
+    max-width: 400px; }
+  .bonuses-text-three .box-text {
+    max-width: none; }
+  .bonuses-text-img {
+    margin: 30px auto 0;
+    right: 0;
+    top: 0;
+    position: relative; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -1745,21 +1780,12 @@ footer {
       margin: 0 20px 0 0; }
   .catalog-casino h2 {
     font-size: 30px; }
-  .view-section {
-    display: none; }
   .main .box-text h3 {
     font-size: 18px;
     line-height: normal; }
   .slot-two .slot-img {
     top: 0;
     right: 0; }
-  .bonuses-text-three .box-text {
-    max-width: none; }
-  .bonuses-text-img {
-    margin: 20px auto 0;
-    top: 0;
-    right: 0;
-    position: relative; }
   .bonuses-text-three h3 {
     font-size: 18px;
     line-height: normal; }
@@ -1784,7 +1810,9 @@ footer {
     max-width: none;
     padding: 0; }
   .casino-page h1 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .text-hidden {
+    max-width: none; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px) {
@@ -1806,8 +1834,6 @@ footer {
     font-size: 30px; }
     .catalog-casino h2 span {
       font-size: 18px; }
-  .play-now-carousel-item {
-    height: 400px; }
   .bonuses-text h2 {
     font-size: 24px; }
   .bonuses-text .box-text {
@@ -1846,7 +1872,26 @@ footer {
     right: -12px; }
   .btn-clear {
     width: 10px;
-    height: 10px; } }
+    height: 10px; }
+  .links-play-now {
+    font-size: 50px;
+    padding: 8px 29px; }
+  .play-now-carousel__content {
+    position: relative;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#000000));
+    background: linear-gradient(180deg, #000000 0%, #000000 100%);
+    padding: 50px 0 26px; }
+  .play-now-carousel-item {
+    height: auto; }
+  .menu-page li a {
+    font-size: 12px;
+    padding: 5px; }
+  .view-section__head {
+    padding: 10px; }
+    .view-section__head h4 {
+      font-size: 14px; }
+  .view-section {
+    max-width: 200px; } }
 
 @media only screen and (max-width: 480px) {
   h1 {

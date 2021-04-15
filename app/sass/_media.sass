@@ -3,6 +3,10 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1440px)
+  .card-casino
+    max-width: calc(100% - 30px)
+
 @media only screen and (max-width: 1350px)
   .menu
     font-size: 14px
@@ -13,7 +17,7 @@
   .casino-details-rating
     font-size: 18px
 
-@media only screen and (max-width: 1240px)
+@media only screen and (max-width: 1250px)
   .card-casino
     padding: 20px 0
 
@@ -38,11 +42,15 @@
 
   .slot-img
     max-width: 500px
+    right: -110px
 
   .owl-casino-item
     padding: 0
     .box-text
       margin: 0 auto
+
+  .main .box-text, .bonuses-text-three .box-text, .main-content
+    max-width: 700px
 
 @media only screen and (max-width: 1200px)
   .logo
@@ -96,7 +104,11 @@
     top: 0
     right: -40px
 
-  .deposit-text-two .box-text
+  .deposit-text-two .box-text, .main .box-text
+    max-width: 600px
+
+
+  .text-hidden
     max-width: 600px
 
 /* Medium Devices, Desktops */
@@ -163,6 +175,9 @@
   .catalog-casino h2
     font-size: 40px
 
+  .main .box-text
+    max-width: none
+
   .all-casino-img
     position: relative
     top: 0
@@ -224,6 +239,21 @@
   .casino-page
     padding: 60px 0 40px
 
+  .slot .box-text
+    max-width: 500px
+
+  .slot-img
+    max-width: 400px
+
+  .bonuses-text-three .box-text
+    max-width: none
+
+  .bonuses-text-img
+    margin: 30px auto 0
+    right: 0
+    top: 0
+    position: relative
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
   h1
@@ -275,8 +305,7 @@
   .catalog-casino h2
     font-size: 30px
 
-  .view-section
-    display: none
+
 
   .main .box-text h3
     font-size: 18px
@@ -285,15 +314,6 @@
   .slot-two .slot-img
     top: 0
     right: 0
-
-  .bonuses-text-three .box-text
-    max-width: none
-
-  .bonuses-text-img
-    margin: 20px auto 0
-    top: 0
-    right: 0
-    position: relative
 
   .bonuses-text-three h3
     font-size: 18px
@@ -330,6 +350,9 @@
   .casino-page h1
     font-size: 30px
 
+  .text-hidden
+    max-width: none
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px)
   .card-casino-offer, .card-casino-info
@@ -355,9 +378,6 @@
     font-size: 30px
     span
       font-size: 18px
-
-  .play-now-carousel-item
-    height: 400px
 
   .bonuses-text h2
     font-size: 24px
@@ -413,6 +433,30 @@
   .btn-clear
     width: 10px
     height: 10px
+
+  .links-play-now
+    font-size: 50px
+    padding: 8px 29px
+
+  .play-now-carousel__content
+    position: relative
+    background: linear-gradient(180deg, #000000 0%, #000000 100%)
+    padding: 50px 0 26px
+
+  .play-now-carousel-item
+    height: auto
+
+  .menu-page li a
+    font-size: 12px
+    padding: 5px
+
+  .view-section__head
+    padding: 10px
+    h4
+      font-size: 14px
+
+  .view-section
+    max-width: 200px
 
 @media only screen and (max-width: 480px)
   h1
