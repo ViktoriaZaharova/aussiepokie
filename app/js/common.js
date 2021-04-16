@@ -117,7 +117,7 @@ $('.view-section__head').on('click', function () {
 
 $(window).scroll(function () {
     if ($(this).scrollTop() > 150) {
-        $('.view-section').addClass('fixed');
+        $('.view-section').addClass('fixed').find('.view-section__body').fadeOut().siblings('.view-section__head').removeClass('click');
     } else {
         $('.view-section').removeClass('fixed');
     }
