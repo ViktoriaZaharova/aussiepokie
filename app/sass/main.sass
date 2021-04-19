@@ -515,6 +515,7 @@ header
 .bonuses-text
   background: linear-gradient(to top, rgba(250, 141, 3, 0.5) 0%, rgba(196, 196, 196, 0) 39.06%)
   padding: 0 0 50px
+  z-index: -1
   .container
     max-width: 1150px
   h2
@@ -1010,7 +1011,8 @@ footer
 .all-casino-img
   position: absolute
   right: -15px
-  top: 0
+  top: 50%
+  transform: translate(0,-50%)
   max-width: 500px
   width: 100%
   display: flex
@@ -1026,7 +1028,7 @@ footer
   z-index: 3
 
 .view-section.fixed
-  top: 0
+  top: 5px
 
 .view-section__head
   width: 100%
@@ -1268,7 +1270,7 @@ footer
 .casino-page-wrapper
   width: 100%
   display: flex
-  align-items: flex-start
+  align-items: stretch
   flex-wrap: wrap
   justify-content: space-between
 
@@ -1338,11 +1340,17 @@ footer
     li
       width: 31px
       height: 31px
+  strong
+    font-weight: bold
 
 .casino-page-partners
   max-width: 33.3%
   width: 100%
   margin: 0 0 40px
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
 
 .casino-page-partners-box
   margin: 0 0 30px
@@ -1389,7 +1397,6 @@ footer
   display: flex
   align-items: flex-start
   flex-wrap: wrap
-  //justify-content: space-around
   .btn
     height: 41px
     font-size: 16px
@@ -1408,6 +1415,222 @@ footer
     letter-spacing: 0.05em
     min-width: 330px
     text-align: center
+
+
+//single-provider    
+.single-provider
+  h1
+    text-align: left
+    margin: 45px 0 55px
+    &:before
+      display: none
+  .logo-casino
+    max-width: 243px
+    img
+      filter: none
+  .list-device
+    margin: 37px 0 0
+
+.deposit-text-three, .bonuses-text-five
+  &:before
+    display: none
+  .box-text
+    max-width: none
+
+.bonuses-playing-two
+  ul
+    margin: 50px 0 0
+    padding: 0 0 0 20px
+  h2
+    text-align: center
+  .wrapper
+    width: 100%
+    border-bottom: 1px solid #FA8D03
+    justify-content: space-between
+    .btn
+      margin: 0 0 29px
+      text-transform: none
+      letter-spacing: 0.05em
+      font-size: 16px
+      max-width: 241px
+      font-weight: 500
+      
+.bonuses-playing-three
+  h2
+    text-align: left
+
+.catalog-casino-three
+  h2
+    text-transform: none
+
+.popular-casino
+  padding: 40px 0
+  h2
+    font-size: 40px
+  .card-load
+    width: 100%
+
+.tr
+  width: 100%
+  display: flex
+  align-items: stretch
+  font-size: 18px
+  strong
+    display: inline-block
+    font-weight: bold
+.td
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: center
+  text-align: center
+  border: 1px solid #8C8C8C
+  margin: 0 -1px -1px 0
+  &:first-child, &:nth-child(2), &:last-child
+    width: 25%
+  &:nth-child(3)
+    width: 30%
+  &:nth-child(4), &:nth-child(5)
+    width: 10%
+
+
+.table-head
+  width: 100%
+  display: flex
+  align-items: center
+  color: #8C8C8C
+  font-size: 12px
+  font-weight: bold
+  text-align: center
+  margin: 0 0 12px
+  .tr
+    font-size: 12px
+    font-weight: bold
+  .td
+    margin: 0
+    border: none
+
+.bonuses-text-four
+  &:before
+    display: none
+
+.list-casino-logos
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  li
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 80px
+    margin: 19px 0 0
+    img
+      max-height: 100%
+
+.card-casino-v2
+  padding: 37px 0 10px
+  margin: 0 auto -1px
+
+//.slot-page
+.slot-page
+  .list-rating
+    margin: 0 0 43px
+    li
+      width: 31px
+      height: 31px
+
+
+.slot-page__video
+  width: 100%
+  margin: 26px auto 48px
+  position: relative
+  max-height: 659px
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: .7
+    z-index: 1
+  img
+    width: 100%
+    z-index: -1
+
+.title-line
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  h1
+    margin: 0
+    padding: 10px
+    text-align: left
+    &:before
+      display: none
+
+.logo-slot
+  max-width: 288px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.slot-page__video-content
+  position: absolute
+  width: 100%
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  z-index: 1
+  .btn
+    padding: 0 35px
+    font-size: 16px
+
+.btn-play
+  margin: 0 auto 22px
+  background: rgba(250, 141, 3, 0.2)
+  width: 74px
+  height: 74px
+  border: 3px solid #FA8D03
+    radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 13px 8px 13px 13px
+
+.list-characteristics
+  margin: 64px auto
+  max-width: 600px
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 0 18px
+  font-size: 25px
+  font-weight: bold
+  border:
+    left: 2px solid $accent
+    right: 2px solid $accent
+  span
+    font-weight: 300
+  li
+    width: 50%
+    margin: 0 0 40px
+    &:last-child, &:nth-last-child(-n+2)
+      margin: 0
 
 
 @import "media"
