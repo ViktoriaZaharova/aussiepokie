@@ -146,8 +146,8 @@ button {
   transition: .3s ease; }
 
 .btn-burger {
-  width: 20px;
-  height: 16px;
+  width: 26px;
+  height: 20px;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -159,11 +159,16 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 0 0 auto; }
+  margin: 0;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
   .btn-burger span {
     width: 100%;
-    height: 2px;
-    background: #FA8D03; }
+    height: 4px;
+    background: #fff; }
 
 .container {
   display: -webkit-box;
@@ -471,7 +476,7 @@ header {
 
 .card-load {
   display: none; }
-  .card-load:nth-child(-n+10) {
+  .card-load:nth-child(-n+6) {
     display: block; }
 
 .card-casino-info {
@@ -533,21 +538,7 @@ header {
   width: 100%;
   margin: 0 auto 0 0; }
 
-.card-casino-top1 {
-  background: rgba(250, 141, 3, 0.2);
-  border: 4px solid #FA8D03; }
-
-.card-casino-top2 {
-  background: rgba(250, 141, 3, 0.1);
-  border: 2px solid #FA8D03; }
-
-.card-casino-top3 {
-  background: rgba(250, 141, 3, 0.05);
-  border: 1px solid #FA8D03; }
-
 .bonuses-text {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(250, 141, 3, 0.5)), color-stop(39.06%, rgba(196, 196, 196, 0)));
-  background: linear-gradient(to top, rgba(250, 141, 3, 0.5) 0%, rgba(196, 196, 196, 0) 39.06%);
   padding: 0 0 50px;
   z-index: -1; }
   .bonuses-text .container {
@@ -571,9 +562,7 @@ header {
     z-index: 1; }
 
 .poker-play-australies {
-  padding: 50px 0 57px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 141, 3, 0.5)), color-stop(39.06%, rgba(196, 196, 196, 0)));
-  background: linear-gradient(to bottom, rgba(250, 141, 3, 0.5) 0%, rgba(196, 196, 196, 0) 39.06%); }
+  padding: 50px 0 57px; }
   .poker-play-australies h2 {
     text-transform: uppercase;
     font-size: 40px;
@@ -598,7 +587,18 @@ header {
 .play-now-carousel-item {
   position: relative;
   width: 100%;
-  height: 500px; }
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .play-now-carousel-item img {
     width: 100%;
     height: 100%;
@@ -612,19 +612,19 @@ header {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 1;
-  padding: 34px 0 0;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 24px 0 0;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 24px;
   color: #fff;
   text-align: center; }
 
 .links-play-now {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   color: #FA8D03;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 900;
   text-transform: uppercase;
-  padding: 10px 29px;
+  padding: 8px 29px;
   background: rgba(250, 141, 3, 0.2);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -673,6 +673,12 @@ header {
     width: 9px;
     height: 10px;
     fill: #001395; }
+  .block_title h3 {
+    -webkit-transition: .3s ease;
+    transition: .3s ease; }
+  .block_title:hover h3 {
+    text-decoration: underline;
+    font-weight: bold; }
 
 .block_hover {
   display: none;
@@ -680,26 +686,13 @@ header {
   padding: 12px 20px;
   font-size: 14px; }
 
-.in .block_title {
-  background: #FA8D03;
-  color: #fff; }
-  .in .block_title .arrow-icon {
-    fill: #fff; }
+.in .block_title h3 {
+  text-decoration: underline;
+  font-weight: bold; }
 
 .slot {
   padding: 118px 0 57px;
-  position: relative;
-  z-index: 1; }
-  .slot:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 231px;
-    z-index: -1;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 141, 3, 0.5)), color-stop(39.06%, rgba(196, 196, 196, 0)));
-    background: linear-gradient(to bottom, rgba(250, 141, 3, 0.5) 0%, rgba(196, 196, 196, 0) 39.06%); }
+  position: relative; }
   .slot .container {
     max-width: 1175px; }
   .slot h2 {
@@ -938,37 +931,37 @@ footer {
   display: none;
   position: fixed;
   z-index: 3;
-  right: 0;
+  left: 0;
   top: 0;
-  height: 100%;
   width: 100%;
-  max-width: 300px;
+  max-width: 260px;
   background: #161648;
   color: #fff;
-  padding: 30px;
-  overflow-y: auto; }
+  padding: 7px 25px 27px; }
   .mobile-menu .logo {
-    margin: 0 auto;
-    padding: 0 0 20px;
-    border-bottom: 1px solid rgba(250, 141, 3, 0.7);
-    max-width: none; }
+    margin: 0 auto 0 0;
+    max-width: 138px; }
   .mobile-menu .menu {
-    margin: 30px 0; }
+    margin: 30px 0 0;
+    font-size: 16px; }
     .mobile-menu .menu li {
       width: 100%;
-      margin: 0 0 20px; }
+      margin: 0 0 10px; }
   .mobile-menu .dropdown-menu {
     position: relative;
     top: 0;
     -webkit-transform: none;
             transform: none;
     right: 0;
-    left: 0; }
+    left: 0;
+    padding: 9px 10px; }
+  .mobile-menu .dropdown-item {
+    font-size: 12px;
+    margin: 0 0 9px; }
 
 .btn-close {
-  width: 20px;
-  height: 20px;
-  margin: 0 0 20px auto;
+  width: 21px;
+  height: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -978,16 +971,18 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-  cursor: pointer; }
+  position: absolute;
+  cursor: pointer;
+  top: 19px;
+  right: 27px; }
   .btn-close:before, .btn-close:after {
     content: '';
     position: absolute;
-    width: 2px;
+    width: 4px;
     height: 100%;
-    background: #FA8D03;
+    background: #fff;
     top: 0;
-    left: 10px; }
+    left: 9px; }
   .btn-close:before {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg); }
@@ -1048,7 +1043,8 @@ footer {
 .cards-pokies {
   padding: 100px 0; }
   .cards-pokies .card-load {
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    display: block; }
   .cards-pokies .btn-load {
     margin: 0 auto; }
 
@@ -1177,6 +1173,11 @@ footer {
       height: 11px;
       margin: 0 10px 0 0;
       fill: #fff; }
+    .list-pagination li:first-child a:hover, .list-pagination li:last-child a:hover {
+      background: #161648;
+      color: #fff; }
+      .list-pagination li:first-child a:hover .svg-icon, .list-pagination li:last-child a:hover .svg-icon {
+        fill: #fff; }
   .list-pagination li:first-child {
     margin: 0 30px 0 0; }
   .list-pagination li:last-child {
@@ -1547,7 +1548,9 @@ footer {
   .owl-casino-item .btn {
     height: 41px;
     font-size: 16px;
-    font-weight: 900; }
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 0.05em; }
   .owl-casino-item .box-text {
     text-align: center;
     max-width: 245px;
@@ -1616,7 +1619,10 @@ footer {
   .popular-casino h2 {
     font-size: 40px; }
   .popular-casino .card-load {
-    width: 100%; }
+    width: 100%;
+    display: none; }
+    .popular-casino .card-load:nth-child(-n+7) {
+      display: block; }
 
 .tr {
   width: 100%;
@@ -1816,9 +1822,8 @@ footer {
   padding: 13px 8px 13px 13px; }
 
 .list-characteristics {
-  margin: 64px auto;
-  max-width: 600px;
-  width: 100%;
+  margin: 64px 0 64px auto;
+  width: calc(100% - 90px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1830,18 +1835,41 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 18px;
+  padding: 0 0 0 90px;
   font-size: 25px;
   font-weight: bold;
-  border-left: 2px solid #FA8D03;
-  border-right: 2px solid #FA8D03; }
+  border-left: 2px solid #FA8D03; }
   .list-characteristics span {
+    display: inline-block;
+    margin: 0 0 0 36px;
     font-weight: 300; }
+  .list-characteristics strong {
+    min-width: 200px; }
   .list-characteristics li {
     width: 50%;
-    margin: 0 0 40px; }
+    margin: 0 0 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .list-characteristics li:last-child, .list-characteristics li:nth-last-child(-n+2) {
       margin: 0; }
+    .list-characteristics li .icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 0 20px 0 0; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -1925,7 +1953,12 @@ footer {
   .deposit-text-two .box-text, .main .box-text {
     max-width: 600px; }
   .text-hidden {
-    max-width: 600px; } }
+    max-width: 600px; }
+  .list-characteristics {
+    padding: 0 0 0 30px;
+    margin: 60px 0 40px 30px; }
+    .list-characteristics span {
+      margin: 0 0 0 20px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px) {
@@ -1946,8 +1979,14 @@ footer {
     font-size: 16px; } }
 
 @media only screen and (max-width: 992px) {
-  header .menu {
-    display: none; }
+  header {
+    padding: 9px 0 4px; }
+    header .menu {
+      display: none; }
+    header .logo {
+      margin: 0 auto; }
+  .logo {
+    max-width: 138px; }
   .btn-burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2039,13 +2078,21 @@ footer {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   .list-characteristics {
-    font-size: 15px; }
+    font-size: 15px;
+    margin: 40px 0; }
     .list-characteristics li {
       margin: 0 0 20px; }
   .slot-page .owl-casino-item .box-text {
     margin: 0 auto; }
   .slot-page .list-rating {
-    margin: 0 0 30px; } }
+    margin: 0 0 30px; }
+  .list-characteristics strong {
+    min-width: 100px; }
+  .list-characteristics li .icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    margin: 0 10px 0 0; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -2177,29 +2224,59 @@ footer {
   .card-casino-info {
     text-align: center; }
   .card-casino-logo {
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 170px; }
   .card-casino {
-    position: relative; }
+    position: relative;
+    margin: 0 auto -1px; }
   .card-casino-number {
     position: absolute;
-    top: 40px;
-    left: 10px; }
+    top: 30px;
+    left: 10px;
+    width: 50px;
+    height: 40px; }
   .catalog-casino h2 {
-    font-size: 30px; }
+    font-size: 40px;
+    letter-spacing: 0; }
     .catalog-casino h2 span {
-      font-size: 18px; }
+      font-size: 16px;
+      letter-spacing: 0.195em; }
   .bonuses-text h2 {
-    font-size: 24px; }
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto 20px; }
   .bonuses-text .box-text {
-    font-size: 16px; }
+    font-size: 18px; }
   .poker-play-australies h2 {
     margin: 0 auto 30px; }
   .poker-play-australies h3 {
-    font-size: 20px; }
+    font-size: 18px;
+    font-weight: normal; }
+  .poker-play-australies .box-text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px; }
   .top-free-pokies-title {
-    padding: 20px 0; }
+    padding: 40px 0; }
     .top-free-pokies-title h2 {
-      font-size: 30px; }
+      font-size: 20px; }
+  .slot {
+    padding: 36px 0; }
+    .slot h2 {
+      margin: 0 auto 20px;
+      text-align: center; }
+  .slot-img {
+    display: none; }
+  .slot .btn-load {
+    margin: 20px auto 0; }
+  .faq h2 {
+    text-align: center;
+    font-size: 38px;
+    margin: 0 auto 30px; }
+  .block_title {
+    padding: 12px 14px 12px 5px; }
+    .block_title .arrow-icon {
+      display: none; }
   .owl-carousel button.owl-dot {
     margin: 0 0 5px 6px; }
   .owl-carousel button.owl-dot:first-child {
@@ -2210,16 +2287,37 @@ footer {
     width: 50%; }
   .news h2 {
     font-size: 35px; }
+  .news-slider {
+    padding: 32px 0 0; }
+    .news-slider .owl-dots {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0; }
   .home-menu {
     width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin: 10px auto 0;
-    font-size: 11px; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto 25px;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    font-size: 18px; }
     .home-menu li {
-      margin: 0; }
-  footer .logo {
-    margin: 0 auto; }
+      margin: 0 0 27px; }
+      .home-menu li:last-child {
+        margin: 0; }
+  footer {
+    padding: 28px 0 30px; }
+    footer .logo {
+      margin: 0 auto; }
   .col-3 {
     width: 50%; }
   .form-filter label .btn-clear {
@@ -2260,12 +2358,33 @@ footer {
   .slot-page__video {
     margin: 20px auto; }
   .list-characteristics {
-    margin: 30px auto 20px;
-    font-size: 14px; } }
+    margin: 30px 0 20px;
+    max-width: none;
+    width: 100%;
+    font-size: 14px; }
+    .list-characteristics li {
+      width: 100%;
+      margin: 0 0 15px; }
+      .list-characteristics li:last-child {
+        margin: 0; }
+  .list-characteristics li:last-child, .list-characteristics li:nth-last-child(-n+2) {
+    margin: 0 0 15px; } }
 
 @media only screen and (max-width: 480px) {
+  .home {
+    background-position: 20% center;
+    padding: 39px 0; }
+    .home .box-text {
+      font-size: 10px;
+      line-height: normal;
+      text-align: center; }
   h1 {
-    font-size: 40px; }
+    font-size: 50px;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 20px; }
+    h1:before {
+      display: none; }
     h1 span {
       font-size: 30px; }
   .col-2, .col-3 {

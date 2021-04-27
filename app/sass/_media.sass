@@ -111,6 +111,12 @@
   .text-hidden
     max-width: 600px
 
+  .list-characteristics
+    padding: 0 0 0 30px
+    margin: 60px 0 40px 30px
+    span
+      margin: 0 0 0 20px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px)
   .card-casino
@@ -139,8 +145,14 @@
 
 @media only screen and (max-width: 992px)
   header
+    padding: 9px 0 4px
     .menu
       display: none
+    .logo
+      margin: 0 auto
+
+  .logo
+    max-width: 138px
 
   .btn-burger
     display: flex
@@ -259,6 +271,7 @@
 
   .list-characteristics
     font-size: 15px
+    margin: 40px 0
     li
       margin: 0 0 20px
 
@@ -267,6 +280,15 @@
 
   .slot-page .list-rating
     margin: 0 0 30px
+
+  .list-characteristics strong
+    min-width: 100px
+
+  .list-characteristics li .icon
+    width: 30px
+    height: 30px
+    min-width: 30px
+    margin: 0 10px 0 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
@@ -430,36 +452,72 @@
 
   .card-casino-logo
     margin: 0 auto
+    max-width: 170px
 
   .card-casino
     position: relative
+    margin: 0 auto -1px
 
   .card-casino-number
     position: absolute
-    top: 40px
+    top: 30px
     left: 10px
+    width: 50px
+    height: 40px
 
   .catalog-casino h2
-    font-size: 30px
+    font-size: 40px
+    letter-spacing: 0
     span
-      font-size: 18px
+      font-size: 16px
+      letter-spacing: 0.195em
 
   .bonuses-text h2
-    font-size: 24px
+    font-size: 20px
+    text-align: center
+    margin: 0 auto 20px
 
   .bonuses-text .box-text
-    font-size: 16px
+    font-size: 18px
 
   .poker-play-australies h2
     margin: 0 auto 30px
 
   .poker-play-australies h3
-    font-size: 20px
+    font-size: 18px
+    font-weight: normal
+
+  .poker-play-australies .box-text
+    font-weight: normal
+    font-size: 18px
+    line-height: 21px
 
   .top-free-pokies-title
-    padding: 20px 0
+    padding: 40px 0
     h2
-      font-size: 30px
+      font-size: 20px
+
+  .slot
+    padding: 36px 0
+    h2
+      margin: 0 auto 20px
+      text-align: center
+
+  .slot-img
+    display: none
+
+  .slot .btn-load
+    margin: 20px auto 0
+
+  .faq h2
+    text-align: center
+    font-size: 38px
+    margin: 0 auto 30px
+
+  .block_title
+    padding: 12px 14px 12px 5px
+    .arrow-icon
+      display: none
 
   .owl-carousel button.owl-dot
     margin: 0 0 5px 6px
@@ -477,15 +535,28 @@
     h2
       font-size: 35px
 
+  .news-slider
+    padding: 32px 0 0
+    .owl-dots
+      display: flex
+      position: absolute
+      top: 0
+      left: 0
+
   .home-menu
     width: 100%
-    justify-content: space-around
-    margin: 10px auto 0
-    font-size: 11px
+    flex-direction: column
+    align-items: center
+    margin: 0 auto 25px
+    order: -1
+    font-size: 18px
     li
-      margin: 0
+      margin: 0 0 27px
+      &:last-child
+        margin: 0
 
   footer
+    padding: 28px 0 30px
     .logo
       margin: 0 auto
 
@@ -535,12 +606,37 @@
     margin: 20px auto
 
   .list-characteristics
-    margin: 30px auto 20px
+    margin: 30px 0 20px
+    max-width: none
+    width: 100%
     font-size: 14px
+    li
+      width: 100%
+      margin: 0 0 15px
+      &:last-child
+        margin: 0
+
+  .list-characteristics li:last-child, .list-characteristics li:nth-last-child(-n+2)
+    margin: 0 0 15px
+
+
 
 @media only screen and (max-width: 480px)
+  .home
+    background-position: 20% center
+    padding: 39px 0
+    .box-text
+      font-size: 10px
+      line-height: normal
+      text-align: center
+
   h1
-    font-size: 40px
+    font-size: 50px
+    text-align: center
+    padding: 0
+    margin: 0 0 20px
+    &:before
+      display: none
     span
       font-size: 30px
 

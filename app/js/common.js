@@ -3,6 +3,14 @@ $('.dropdown').on('click', function (e) {
     $(this).toggleClass('show');
 });
 
+$(document).mouseup(function (e) { // событие клика по веб-документу
+    var div = $(".dropdown"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        div.removeClass('show'); // скрываем его
+    }
+});
+
 $('.play-now-carousel').owlCarousel({
     items: 1,
     loop: true,
@@ -39,7 +47,7 @@ $('.news-slider').owlCarousel({
     autoplay: true,
     autoplayTimeout: 10000,
     autoplayHoverPause: true,
-    responsive: {0: {items: 1}, 490: {items: 2}, 720: {items: 3}, 965: {items: 4}, 1200: {items: 5}}
+    responsive: {0: {items: 1, dots: true}, 490: {items: 2}, 720: {items: 3}, 965: {items: 4}, 1200: {items: 5}}
 });
 
 $('.owl-casino').owlCarousel({
@@ -103,8 +111,40 @@ $('.btn-close').on('click', function () {
 
 $('.btn-load-text').on('click', function (e) {
     e.preventDefault();
-    $(this).siblings('.text-hidden').fadeIn();
+    var
+        $this = $(this),
+        content = $(this).siblings('.text-hidden');
+
+
+    if(!$this.hasClass('trigger')){
+        $this.addClass('trigger');
+        $this.html('LESS');
+
+        content.fadeIn();
+    } else {
+        $this.removeClass('trigger');
+        $this.html('Load More');
+
+        content.fadeOut();
+    }
 });
+
+//плавный скролл
+$(document).ready(function () {
+    $('.go_to').click(function (e) {
+        e.preventDefault();
+        var scroll_el = $(this).attr('href');
+        if ($(scroll_el).length != 0) {
+            $('html, body').animate({
+                scrollTop: $(scroll_el).offset().top
+            }, 500);
+        }
+        return false;
+    });
+});
+//плавный скролл end
+
+
 
 $('.btn-load-card').on('click', function (e) {
     e.preventDefault();
