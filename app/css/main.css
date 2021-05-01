@@ -543,8 +543,7 @@ header {
   margin: 0 auto 0 0; }
 
 .bonuses-text {
-  padding: 0 0 50px;
-  z-index: -1; }
+  padding: 0 0 50px; }
   .bonuses-text .container {
     max-width: 1150px; }
   .bonuses-text h2 {
@@ -1976,13 +1975,211 @@ footer {
       margin: 0; }
   .monthly-bonuses-box .list-check span {
     color: #146726; }
+  .monthly-bonuses-box .list-close li span {
+    color: #EF4823; }
   .monthly-bonuses-box h3 {
     margin: 0 0 28px;
     font-size: 25px;
-    font-weight: bold; }
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+    .monthly-bonuses-box h3 .svg-icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      margin: 0 0 0 10px; }
+  .monthly-bonuses-box ul {
+    margin: 0; }
 
 .mb-30 {
   margin-bottom: 30px; }
+
+.error-section {
+  padding: 120px 0; }
+  .error-section .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .error-section h1 {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: none;
+    font-size: 40px;
+    padding: 0;
+    border: none;
+    margin: 0 0 20px; }
+  .error-section p {
+    color: #8C8C8C;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0 auto 16px;
+    text-align: center; }
+  .error-section img {
+    margin: 0 auto; }
+
+.menu-navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 95px 0 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .menu-navigation li a {
+    color: #0179CB;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .menu-navigation li a:after {
+      display: inline-block;
+      content: '/';
+      margin: 0 10px; }
+    .menu-navigation li a:hover {
+      color: #FA8D03; }
+  .menu-navigation li:last-child a:after {
+    display: none; }
+
+.catalog-casino-three .list-casino-logos {
+  padding: 0 200px 0 0; }
+  .catalog-casino-three .list-casino-logos li {
+    max-width: 167px;
+    padding: 0 10px; }
+
+.bonuses-promotions .monthly-bonuses-box .btn {
+  max-width: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.bonuses-promotions .monthly-bonuses-box .box-text {
+  font-size: 18px;
+  line-height: 21px; }
+
+.monthly-bonuses-box__logo {
+  margin: 0 auto 34px;
+  max-width: 147px; }
+
+.deposit-text-four .box-text {
+  font-weight: 500; }
+
+.single-deposit-main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.single-deposit-main__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px; }
+  .single-deposit-main__box strong {
+    font-weight: bold; }
+  .single-deposit-main__box span {
+    margin: 0 0 0 5px; }
+  .single-deposit-main__box .icon {
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 27px 0 0; }
+
+.single-deposit-main__logo {
+  max-width: 184px; }
+
+.card-casino-rating__logo {
+  max-width: 267px;
+  width: 100%; }
+
+.cashback-bonuses-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.cashback-bonuses-box {
+  max-width: 295px;
+  width: 100%;
+  margin: 0 0 30px;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  font-weight: bold;
+  color: #263238;
+  text-align: center; }
+  .cashback-bonuses-box:hover .cashback-bonuses-box__img {
+    border: 3px solid #FA8D03; }
+
+.cashback-bonuses-box__img {
+  border: 3px solid transparent;
+    border-radius: 30px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 16px;
+  width: 100%;
+  height: 210px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+  .cashback-bonuses-box__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -2073,7 +2270,9 @@ footer {
     padding: 0 0 0 30px;
     margin: 60px 0 40px 30px; }
     .list-characteristics span {
-      margin: 0 0 0 20px; } }
+      margin: 0 0 0 20px; }
+  .deposit-text-three .box-text, .bonuses-text-five .box-text {
+    max-width: none; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px) {
@@ -2133,7 +2332,9 @@ footer {
     position: relative;
     top: 0;
     right: 0;
-    margin: 30px auto 0; }
+    margin: 30px auto 0;
+    -webkit-transform: none;
+            transform: none; }
   .main-content {
     max-width: none; }
   .main {
@@ -2210,7 +2411,14 @@ footer {
     margin: 0 10px 0 0; }
   .bonus-methods-wrapper {
     -ms-flex-pack: distribute;
-        justify-content: space-around; } }
+        justify-content: space-around; }
+  .catalog-casino-three .list-casino-logos {
+    padding: 0; }
+  .cashback-bonuses-wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .cashback-bonuses-box {
+    font-size: 18px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -2345,7 +2553,13 @@ footer {
       margin: 0 0 20px;
       font-size: 20px; }
     .monthly-bonuses-box .btn {
-      margin: 30px 0 0; } }
+      margin: 30px 0 0; }
+  .bonuses-promotions .monthly-bonuses-box .box-text {
+    font-size: 16px; }
+  .cashback-bonuses-box {
+    max-width: 250px; }
+    .cashback-bonuses-box__img {
+      height: 170px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px) {
@@ -2502,7 +2716,16 @@ footer {
   .list-characteristics li:last-child, .list-characteristics li:nth-last-child(-n+2) {
     margin: 0 0 15px; }
   .col-6 {
-    width: 100%; } }
+    width: 100%; }
+  .error-section {
+    padding: 60px 0; }
+    .error-section h1 {
+      font-size: 30px; }
+    .error-section p {
+      font-size: 18px; }
+  .menu-navigation {
+    font-size: 16px;
+    margin: 30px auto 0; } }
 
 @media only screen and (max-width: 480px) {
   .home {
