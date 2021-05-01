@@ -120,8 +120,25 @@
     span
       margin: 0 0 0 20px
 
-  .deposit-text-three .box-text, .bonuses-text-five .box-text
+  .deposit-text-three .box-text, .bonuses-text-five .box-text, .bonus-methods .box-text
     max-width: none
+
+  .wrapper-page-sidebar
+    width: 400px
+    .view-section
+      max-width: 300px
+
+  .wrapper-page-content
+    width: calc(100% - 400px)
+
+  .news-box__title
+    font-size: 20px
+
+  .news-box__category
+    font-size: 16px
+
+  .news-box__body
+    padding: 20px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px)
@@ -147,6 +164,8 @@
 
   .bonuses-text-three .box-text
     font-size: 16px
+
+
 
 
 @media only screen and (max-width: 992px)
@@ -308,6 +327,33 @@
 
   .cashback-bonuses-box
     font-size: 18px
+
+  .col-4
+    width: 33.3%
+
+  .category-news
+    margin: 40px 0
+    padding: 0 0 10px
+
+  .news-box__footer
+    flex-direction: column
+    align-items: center
+
+    .btn
+      max-width: none
+      margin: 10px auto 0
+
+  .wrapper-page-sidebar, .wrapper-page-content
+    width: 100%
+
+  .main-article
+    padding: 0 0 30px
+
+
+  .sidebar-box
+    margin: 0 0 40px
+    &:last-child
+      margin: 0 0 40px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
@@ -484,6 +530,11 @@
     &__img
       height: 170px
 
+
+
+
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px)
   .card-casino-offer, .card-casino-info
@@ -579,7 +630,7 @@
     h2
       font-size: 35px
 
-  .news-slider
+  .news-slider, .news-slider-two
     padding: 32px 0 0
     .owl-dots
       display: flex
@@ -677,6 +728,45 @@
     font-size: 16px
     margin: 30px auto 0
 
+  .wrapper-page-sidebar .view-section
+    max-width: 200px
+
+  .wrapper-page-content
+    .list-pagination
+      margin: 20px 0
+
+  .category-news-btn
+    font-size: 14px
+
+  .author-article-box
+    flex-direction: column
+    align-items: center
+
+  .author-article-box__body
+    width: 100%
+    padding: 0
+    margin: 20px 0 0
+
+  .sidebar-box
+    padding: 0 20px
+
+  .top-casinos__body
+    flex-direction: column
+    align-items: flex-start
+    .btn
+      max-width: none
+
+  .top-casinos__body-text
+    font-size: 16px
+    margin: 0 0 10px
+
+  .top-articles__img
+    width: 110px
+    height: 100px
+
+  .top-articles__body
+    width: calc(100% - 110px)
+
 @media only screen and (max-width: 480px)
   .home
     background-position: 20% center
@@ -729,3 +819,9 @@
     li
       width: 50%
       height: 50px
+
+  .col-4
+    width: 50%
+
+  .news-box
+    max-width: none

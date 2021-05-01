@@ -50,6 +50,18 @@ $('.news-slider').owlCarousel({
     responsive: {0: {items: 1, dots: true}, 490: {items: 2}, 720: {items: 3}, 965: {items: 4}, 1200: {items: 5}}
 });
 
+$('.news-slider-two').owlCarousel({
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    margin: 0,
+    loop: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    responsive: {0: {items: 1, dots: true}, 720: {items: 2}, 1200: {items: 3}}
+});
+
 $('.owl-casino').owlCarousel({
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
