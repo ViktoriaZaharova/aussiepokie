@@ -1,6 +1,7 @@
 $('.dropdown').on('click', function (e) {
     e.preventDefault();
-    $(this).toggleClass('show');
+    $('.dropdown').removeClass('show');
+    $(this).addClass('show');
 });
 
 $(document).mouseup(function (e) { // событие клика по веб-документу
@@ -29,7 +30,6 @@ $('.top-free-pokies-slider').owlCarousel({
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
     margin: 0,
-    // items: 5,
     loop: false,
     dots: true,
     autoplay: true,
@@ -115,10 +115,14 @@ accordeon();
 
 $('.btn-burger').on('click', function () {
     $('.mobile-menu').fadeToggle();
+    $('header').toggleClass('menu-open');
+    $('.view-section').fadeToggle();
 });
 
 $('.btn-close').on('click', function () {
     $('.mobile-menu').fadeOut();
+    $('header').removeClass('menu-open');
+    $('.view-section').fadeIn();
 });
 
 $('.btn-load-text').on('click', function (e) {

@@ -396,6 +396,9 @@ header {
         -ms-flex-align: center;
             align-items: center; }
 
+.menu-open .logo {
+  opacity: 0; }
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1039,7 +1042,7 @@ footer {
   position: relative; }
   .form-filter label .btn-clear {
     position: absolute;
-    right: -27px;
+    right: -23px;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%); }
@@ -1118,7 +1121,7 @@ footer {
 .view-section {
   position: fixed;
   right: 0;
-  top: 110px;
+  top: 70px;
   max-width: 320px;
   width: 100%;
   z-index: 3; }
@@ -3525,4 +3528,8 @@ footer {
   .team .box-text {
     font-size: 16px; }
   .main-terms {
-    margin: 0 0 50px; } }
+    margin: 0 0 50px; }
+  .form-filter label {
+    width: calc(100% - 20px); }
+  .form-filter label .btn-clear {
+    right: -20px; } }
