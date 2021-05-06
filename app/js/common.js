@@ -1,7 +1,32 @@
-$('.dropdown').on('click', function (e) {
+$('.mobile-menu .dropdown').on('click', function (e) {
     e.preventDefault();
-    $('.dropdown').removeClass('show');
+    $('.mobile-menu .dropdown').removeClass('show');
     $(this).addClass('show');
+
+    if ($(this).hasClass('show')) {
+        $('.view-section').fadeOut();
+    } else {
+        $('.view-section').fadeIn();
+    }
+});
+
+$('header .dropdown').hover(function () {
+    $('header  .dropdown').removeClass('show');
+    $(this).addClass('show');
+
+    if ($(this).hasClass('show')) {
+        $('.view-section').fadeOut();
+    } else {
+        $('.view-section').fadeIn();
+    }
+});
+$(document).mouseover(function (e) { // событие клика по веб-документу
+    var div = $(".dropdown"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        div.removeClass('show'); // скрываем его
+        $('.view-section').fadeIn();
+    }
 });
 
 $(document).mouseup(function (e) { // событие клика по веб-документу
@@ -9,6 +34,7 @@ $(document).mouseup(function (e) { // событие клика по веб-до
     if (!div.is(e.target) // если клик был не по нашему блоку
         && div.has(e.target).length === 0) { // и не по его дочерним элементам
         div.removeClass('show'); // скрываем его
+        $('.view-section').fadeIn();
     }
 });
 
@@ -59,7 +85,7 @@ $('.news-slider-two').owlCarousel({
     autoplay: true,
     autoplayTimeout: 10000,
     autoplayHoverPause: true,
-    responsive: {0: {items: 1, dots: true}, 720: {items: 2}, 1200: {items: 3}}
+    responsive: {0: {items: 1, dots: true}, 500: {items: 2}, 680: {items: 3}, 850: {items: 4}, 992: {items: 3}, 1200: {items: 4}}
 });
 
 $('.owl-casino').owlCarousel({
@@ -92,11 +118,26 @@ $('.casino-page-games-slider').owlCarousel({
     margin: 0,
     dots: false,
     loop: true,
+    autoWidth: true,
+    items: 5,
     autoplay: true,
     autoplayTimeout: 10000,
     autoplayHoverPause: true,
     responsive: {0: {items: 4}, 490: {items: 4}, 720: {items: 4}, 965: {items: 5}}
 });
+
+$('.card-casino-rating__logos').owlCarousel({
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    margin: 0,
+    loop: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    responsive: {0: {items: 2}, 700: {items: 3}}
+});
+
 
 // accordeon
 function accordeon() {
@@ -132,7 +173,7 @@ $('.btn-load-text').on('click', function (e) {
         content = $(this).siblings('.text-hidden');
 
 
-    if(!$this.hasClass('trigger')){
+    if (!$this.hasClass('trigger')) {
         $this.addClass('trigger');
         $this.html('LESS');
 
@@ -159,7 +200,6 @@ $(document).ready(function () {
     });
 });
 //плавный скролл end
-
 
 
 $('.btn-load-card').on('click', function (e) {

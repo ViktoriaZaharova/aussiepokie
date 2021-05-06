@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -448,7 +449,7 @@ header {
   display: none;
   position: absolute;
   left: 50%;
-  top: calc(100% + 40px);
+  top: 100%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 2;
@@ -1028,7 +1029,7 @@ footer {
 
 .bonuses-text-two {
   background: transparent;
-  padding: 70px 0; }
+  padding: 50px 0; }
   .bonuses-text-two .container {
     max-width: 1350px; }
 
@@ -1121,7 +1122,7 @@ footer {
 .view-section {
   position: fixed;
   right: 0;
-  top: 70px;
+  top: 110px;
   max-width: 320px;
   width: 100%;
   z-index: 3; }
@@ -1201,6 +1202,9 @@ footer {
       color: #fff; }
       .list-pagination li:first-child a:hover .svg-icon, .list-pagination li:last-child a:hover .svg-icon {
         fill: #fff; }
+    .list-pagination li:first-child a:focus, .list-pagination li:last-child a:focus {
+      background: #FA8D03;
+      color: #fff; }
   .list-pagination li:first-child {
     margin: 0 30px 0 0; }
   .list-pagination li:last-child {
@@ -1526,7 +1530,7 @@ footer {
     font-size: 18px; }
 
 .casino-page-partners-slider__item {
-  height: 50px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1535,22 +1539,44 @@ footer {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  fill: #8C8C8C; }
+  .casino-page-partners-slider__item:hover {
+    fill: #000; }
+    .casino-page-partners-slider__item:hover .casino-page-partners-slider__item-name {
+      color: #000; }
   .casino-page-partners-slider__item img {
     max-height: 100%;
     width: auto; }
 
-.casino-page-partners-slider .casino-page-partners-slider__item img {
-  width: auto; }
-
 .casino-page-games-slider .casino-page-partners-slider__item {
-  height: 80px;
+  max-width: 110px;
+  height: auto; }
+  .casino-page-games-slider .casino-page-partners-slider__item .svg-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto; }
+
+.casino-page-partners-slider__item-name {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  color: #8C8C8C;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  text-align: center; }
+
+.casino-page-partners-slider .casino-page-partners-slider__item {
   -webkit-transition: .3s ease;
   transition: .3s ease;
-  cursor: pointer;
-  fill: #8C8C8C; }
-  .casino-page-games-slider .casino-page-partners-slider__item:hover {
+  cursor: pointer; }
+  .casino-page-partners-slider .casino-page-partners-slider__item:hover {
     fill: #000; }
+  .casino-page-partners-slider .casino-page-partners-slider__item img {
+    width: auto; }
 
 .owl-casino .owl-dots {
   margin: 27px auto 0; }
@@ -2147,9 +2173,14 @@ footer {
 .single-deposit-main__logo {
   max-width: 184px; }
 
-.card-casino-rating__logo {
-  max-width: 267px;
+.card-casino-rating__logos {
+  max-width: 450px;
   width: 100%; }
+
+.card-casino-rating__logo {
+  max-width: 195px;
+  width: 100%;
+  margin: 0 auto; }
 
 .cashback-bonuses-wrapper {
   width: 100%;
@@ -2607,6 +2638,11 @@ footer {
   margin: 0 0 27px; }
   .top-articles:last-child {
     margin: 0; }
+  .top-articles:hover .top-articles__img {
+    -webkit-filter: drop-shadow(0px 5px 10px rgba(0, 20, 149, 0.35));
+            filter: drop-shadow(0px 5px 10px rgba(0, 20, 149, 0.35)); }
+  .top-articles:hover .top-articles__title {
+    color: #FA8D03; }
 
 .top-articles__img {
   width: 160px;
@@ -2643,8 +2679,6 @@ footer {
   font-weight: bold;
   color: #0179CB;
   margin: 0 0 5px; }
-  .top-articles__title:hover {
-    color: #FA8D03; }
 
 .articles-text-section .box-text {
   max-width: none; }
@@ -2807,6 +2841,12 @@ footer {
       margin: 0 0 30px; }
     .main-terms .box-text ul {
       margin: 0 0 30px; }
+
+.deposit-text-five {
+  padding-top: 0; }
+  .deposit-text-five h2 {
+    font-size: 40px;
+    margin-bottom: 65px; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -3473,7 +3513,10 @@ footer {
     width: 110px;
     height: 100px; }
   .top-articles__body {
-    width: calc(100% - 110px); } }
+    width: calc(100% - 110px); }
+  .deposit-text-five h2 {
+    margin-bottom: 30px;
+    font-size: 30px; } }
 
 @media only screen and (max-width: 480px) {
   .home {

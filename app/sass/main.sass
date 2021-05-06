@@ -1,6 +1,7 @@
 @import "fonts"
 @import "vars"
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap')
 *
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
@@ -381,6 +382,7 @@ header
 .dropdown
   position: relative
 
+
 .show
   .dropdown-toggle
     &:after
@@ -408,7 +410,7 @@ header
   display: none
   position: absolute
   left: 50%
-  top: calc(100% + 40px)
+  top: 100%
   transform: translate(-50%, 0)
   z-index: 2
   padding: 11px 33px
@@ -959,7 +961,7 @@ footer
 
 .bonuses-text-two
   background: transparent
-  padding: 70px 0
+  padding: 50px 0
   .container
     max-width: 1350px
 
@@ -1039,7 +1041,7 @@ footer
 .view-section
   position: fixed
   right: 0
-  top: 70px
+  top: 110px
   max-width: 320px
   width: 100%
   z-index: 3
@@ -1111,6 +1113,9 @@ footer
           color: #fff
           .svg-icon
             fill: #fff
+        &:focus
+          background: $accent
+          color: #fff
     &:first-child
       margin: 0 30px 0 0
 
@@ -1226,18 +1231,6 @@ footer
     background: $accent
     color: #fff
 
-//.dropdown-filter
-//
-//  .dropdown-menu
-//    top: 100%
-//    background: #fff
-//    width: 100%
-//    border: 1px solid #1B222B
-//      top: none
-//    a
-//      color: $accent
-//      &:hover
-//        color: #000
 
 .deposit-text-two
   position: relative
@@ -1385,27 +1378,47 @@ footer
     font-size: 18px
 
 .casino-page-partners-slider__item
-  height: 50px
+  height: 80px
   display: flex
   align-items: center
   justify-content: center
+  flex-wrap: wrap
+  fill: #8C8C8C
+  &:hover
+    fill: #000
+    .casino-page-partners-slider__item-name
+      color: #000
   img
     max-height: 100%
     width: auto
 
-.casino-page-partners-slider
-  .casino-page-partners-slider__item
-    img
-      width: auto
-
 .casino-page-games-slider
   .casino-page-partners-slider__item
-    height: 80px
+    max-width: 110px
+    height: auto
+    .svg-icon
+      width: 60px
+      height: 60px
+      margin: 0 auto
+
+.casino-page-partners-slider__item-name
+  white-space: nowrap
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 16px
+  color: #8C8C8C
+  font-family: 'Open Sans', sans-serif
+  width: 100%
+  text-align: center
+
+.casino-page-partners-slider
+  .casino-page-partners-slider__item
     transition: .3s ease
     cursor: pointer
-    fill: #8C8C8C
     &:hover
       fill: #000
+    img
+      width: auto
 
 .owl-casino
   .owl-dots
@@ -1870,9 +1883,14 @@ footer
 .single-deposit-main__logo
   max-width: 184px
 
-.card-casino-rating__logo
-  max-width: 267px
+.card-casino-rating__logos
+  max-width: 450px
   width: 100%
+
+.card-casino-rating__logo
+  max-width: 195px
+  width: 100%
+  margin: 0 auto
 
 .cashback-bonuses-wrapper
   width: 100%
@@ -2224,6 +2242,11 @@ footer
   margin: 0 0 27px
   &:last-child
     margin: 0
+  &:hover
+    .top-articles__img
+      filter: drop-shadow(0px 5px 10px rgba(0, 20, 149, 0.35))
+    .top-articles__title
+      color: $accent
 
 .top-articles__img
   width: 160px
@@ -2252,8 +2275,6 @@ footer
   font-weight: bold
   color: #0179CB
   margin: 0 0 5px
-  &:hover
-    color: $accent
 
 .articles-text-section
   .box-text
@@ -2400,6 +2421,12 @@ footer
       margin: 0 0 30px
     ul
       margin: 0 0 30px
+
+.deposit-text-five
+  padding-top: 0
+  h2
+    font-size: 40px
+    margin-bottom: 65px
 
 @import "media"
 // Всегда в конце
