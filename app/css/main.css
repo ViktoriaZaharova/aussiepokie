@@ -424,6 +424,13 @@ header {
 .dropdown {
   position: relative; }
 
+header .dropdown:hover .dropdown-toggle:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+header .dropdown:hover .dropdown-menu {
+  display: block; }
+
 .show .dropdown-toggle:after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }

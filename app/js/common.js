@@ -11,40 +11,31 @@ $('.mobile-menu .dropdown').on('click', function (e) {
 });
 
 $('header .dropdown').hover(function () {
-    $('header  .dropdown').removeClass('show');
-    $(this).addClass('show');
+    // $('header  .dropdown').removeClass('show');
+    // $(this).addClass('show');
+    //
+    // if ($(this).hasClass('show')) {
+    //     $('.view-section').fadeOut();
+    // } else {
+    //     $('.view-section').fadeIn();
+    // }
+    $('.view-section').fadeOut();
+});
 
-    if ($(this).hasClass('show')) {
-        $('.view-section').fadeOut();
-    } else {
+$(document).mouseout(function (e) { // событие клика по веб-документу
+    var div = $("header, .mobile-menu"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
         $('.view-section').fadeIn();
     }
 });
 
-$(document).mouseout(function (e) { // событие клика по веб-документу
-    var div = $(".dropdown"); // тут указываем ID элемента
-    if (!div.is(e.target) // если клик был не по нашему блоку
-        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        div.removeClass('show'); // скрываем его
-        // $('.view-section').fadeIn();
-    }
-});
-
-$(document).mouseout(function (e) { // событие клика по веб-документу
-    var div = $("header"); // тут указываем ID элемента
-    if (!div.is(e.target) // если клик был не по нашему блоку
-        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        // div.removeClass('show'); // скрываем его
-        $('.view-section').fadeIn();
-    }
-});
 
 $(document).mouseup(function (e) { // событие клика по веб-документу
     var div = $(".dropdown"); // тут указываем ID элемента
     if (!div.is(e.target) // если клик был не по нашему блоку
         && div.has(e.target).length === 0) { // и не по его дочерним элементам
         div.removeClass('show'); // скрываем его
-        $('.view-section').fadeIn();
     }
 });
 
