@@ -1585,7 +1585,7 @@ footer {
 
 .owl-casino-item {
   width: 100%;
-  padding: 0 70px;
+  padding: 10px 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2205,8 +2205,13 @@ footer {
   font-weight: bold;
   color: #263238;
   text-align: center; }
+  .cashback-bonuses-box p {
+    -webkit-transition: .3s ease;
+    transition: .3s ease; }
   .cashback-bonuses-box:hover .cashback-bonuses-box__img {
     border: 3px solid #FA8D03; }
+  .cashback-bonuses-box:hover p {
+    text-shadow: 2px 0 2px rgba(250, 141, 3, 0.5); }
 
 .cashback-bonuses-box__img {
   border: 3px solid transparent;

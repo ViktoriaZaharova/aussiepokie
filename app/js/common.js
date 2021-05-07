@@ -20,11 +20,21 @@ $('header .dropdown').hover(function () {
         $('.view-section').fadeIn();
     }
 });
-$(document).mouseover(function (e) { // событие клика по веб-документу
+
+$(document).mouseout(function (e) { // событие клика по веб-документу
     var div = $(".dropdown"); // тут указываем ID элемента
     if (!div.is(e.target) // если клик был не по нашему блоку
         && div.has(e.target).length === 0) { // и не по его дочерним элементам
         div.removeClass('show'); // скрываем его
+        // $('.view-section').fadeIn();
+    }
+});
+
+$(document).mouseout(function (e) { // событие клика по веб-документу
+    var div = $("header"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        // div.removeClass('show'); // скрываем его
         $('.view-section').fadeIn();
     }
 });
@@ -89,8 +99,8 @@ $('.news-slider-two').owlCarousel({
 });
 
 $('.owl-casino').owlCarousel({
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
+    // animateIn: 'fadeIn',
+    // animateOut: 'fadeOut',
     margin: 0,
     dots: true,
     loop: true,
